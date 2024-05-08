@@ -1,0 +1,554 @@
+[
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_tokenAddress",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "_insuranceAddress",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_minimumJoinDAO",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_maximumJoinDAO",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "constructor"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "member",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "amount",
+        "type": "uint256"
+      }
+    ],
+    "name": "JoinedDAO",
+    "type": "event"
+  },
+  {
+    "inputs": [],
+    "name": "claimGovernanceFee",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "claimRequiredVoting",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "result",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_amount",
+        "type": "uint256"
+      }
+    ],
+    "name": "depositGovernanceFee",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_joinAmount",
+        "type": "uint256"
+      }
+    ],
+    "name": "joinDAO",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "joinDAOMaximum",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "joinDAOMinimum",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_memberAddress",
+        "type": "address"
+      }
+    ],
+    "name": "memberViewData",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "Amount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "votePower",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bool",
+            "name": "joined",
+            "type": "bool"
+          },
+          {
+            "internalType": "uint256",
+            "name": "dateJoined",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "newClaim",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address",
+            "name": "memberAddress",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "percentageLevel",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct Governance.DAOMembers",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "memberWithdrawFunds",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_amountRequest",
+        "type": "uint256"
+      },
+      {
+        "internalType": "string",
+        "name": "_description",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_protocolName",
+        "type": "string"
+      },
+      {
+        "internalType": "address",
+        "name": "_riskProvider",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "_claimerAddress",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_insuranceID",
+        "type": "uint256"
+      }
+    ],
+    "name": "requestCoverClaim",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_idClaimRequests",
+        "type": "uint256"
+      }
+    ],
+    "name": "riskAssessorWithdrawInsurance",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "_insuranceID",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "refund",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_maximumJoinDAO",
+        "type": "uint256"
+      }
+    ],
+    "name": "setMaximumToJoinDAO",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_minimumJoinDAO",
+        "type": "uint256"
+      }
+    ],
+    "name": "setMinimumToJoinDAO",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "totalDAOFund",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "totalDAOMembers",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "totalVotingPower",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_idClaimRequests",
+        "type": "uint256"
+      }
+    ],
+    "name": "userWithdrawInsurance",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "viewAllClaimRequests",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "amountRequested",
+            "type": "uint256"
+          },
+          {
+            "internalType": "string",
+            "name": "description",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "protocolName",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "protocolDomain",
+            "type": "string"
+          },
+          {
+            "internalType": "address",
+            "name": "riskProvider",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "claimer",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "claimRequestDate",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "insuranceID",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address[]",
+            "name": "membersvoted",
+            "type": "address[]"
+          },
+          {
+            "internalType": "uint256",
+            "name": "totalVote",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bool",
+            "name": "claimable",
+            "type": "bool"
+          }
+        ],
+        "internalType": "struct Governance.ClaimRequests[]",
+        "name": "",
+        "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "viewAllDAOMembers",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "Amount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "votePower",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bool",
+            "name": "joined",
+            "type": "bool"
+          },
+          {
+            "internalType": "uint256",
+            "name": "dateJoined",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "newClaim",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address",
+            "name": "memberAddress",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "percentageLevel",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct Governance.DAOMembers[]",
+        "name": "",
+        "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_claimID",
+        "type": "uint256"
+      }
+    ],
+    "name": "viewIndividualClaim",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "amountRequested",
+            "type": "uint256"
+          },
+          {
+            "internalType": "string",
+            "name": "description",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "protocolName",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "protocolDomain",
+            "type": "string"
+          },
+          {
+            "internalType": "address",
+            "name": "riskProvider",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "claimer",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "claimRequestDate",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "insuranceID",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address[]",
+            "name": "membersvoted",
+            "type": "address[]"
+          },
+          {
+            "internalType": "uint256",
+            "name": "totalVote",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bool",
+            "name": "claimable",
+            "type": "bool"
+          }
+        ],
+        "internalType": "struct Governance.ClaimRequests",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_id",
+        "type": "uint256"
+      }
+    ],
+    "name": "vote",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_amount",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "_tokenAddress",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "_withDrawTo",
+        "type": "address"
+      }
+    ],
+    "name": "withdrawCustomTokens",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  }
+]
