@@ -54,7 +54,7 @@ const Footer = () => {
     <Flex
       {...root}
       flexDir={'column'}
-      bgImage="url('/images/Footer-Background.png')"
+      bgGradient='linear(to-b, #010103, #011e4c, #765fff, #b796ff)'
       p="50px"
     >
       <Container>
@@ -70,7 +70,7 @@ const Footer = () => {
             <Image src={prosureLogo} />
 
             <Flex my="25px">
-              <Text {...footerDesc}>
+              <Text {...footerDesc} color={'#adb5bd'}>
                 insurance coverage for these critical components of the
                 decentralized ecosystem
               </Text>
@@ -91,7 +91,7 @@ const Footer = () => {
                   }
                   fontWeight={i === 0 ? 600 : 400}
                   mt={i === 0 ? '10px' : '10px'}
-                  color={i === 0 ? 'black' : 'black'}
+                  color={i === 0 ? '#e9ecef' : '#adb5bd'}
                   href="#"
                 >
                   {e}
@@ -103,17 +103,17 @@ const Footer = () => {
           {/* RIGHT COLUMN */}
           <Flex w={'20%'} align={'flex-end'} flexDir={'column'}>
             <Flex flexDir="column">
-              <Text {...logoFont}>
-                Subscribe to our <Text color="#6750A4">newsletter!</Text>
+              <Text {...logoFont} color={'#e9ecef'}>
+                Subscribe to our <Text color="#b796ff">newsletter!</Text>
               </Text>
 
               <Input
                 placeholder="E-mail address"
                 _placeholder={{
-                  color: 'black',
+                  color: '#e9ecef',
                 }}
                 size="sm"
-                borderColor="ctaBg"
+                borderColor="#868e96"
                 borderRadius="4px 4px 0px 0px"
                 mt="10px"
               />
@@ -121,11 +121,11 @@ const Footer = () => {
               <Button
                 borderRadius="100px"
                 mt="10px"
-                bg="ctaBg"
+                bgGradient="linear(to-r, #765fff, #b796ff)"
                 {...ctaFont}
                 _hover={{
                   bg: 'linear-gradient(0deg, rgba(103, 80, 164, 0.14), rgba(103, 80, 164, 0.14)), #FFFBFE',
-                  color: 'black',
+                  color: '#000',
                 }}
               >
                 {CTA}
@@ -134,7 +134,7 @@ const Footer = () => {
           </Flex>
         </Flex>
 
-        <Divider border="1px solid #3E7FDF" />
+        <Divider border="1px solid #011e4c" />
 
         {/* Footer Links is here */}
         <Box
@@ -150,16 +150,16 @@ const Footer = () => {
             justify={{ base: 'center', md: 'space-between' }}
             align={{ base: 'center', md: 'center' }}
           >
-            <Text>© {copyRightYear} Prosure. All rights reserved</Text>
+            <Text color={'#e9ecef'}>© {copyRightYear} Prosure. All rights reserved</Text>
             <Stack direction={'row'} spacing={6}>
               <SocialButton label={'Discord'} href={'#'}>
-                <FaDiscord />
+                <FaDiscord color='#e9ecef' />
               </SocialButton>
               <SocialButton label={'Twitter'} href={'#'}>
-                <FaTwitter />
+                <FaTwitter color='#e9ecef' />
               </SocialButton>
               <SocialButton label={'Github'} href={'#'}>
-                <FaGithub />
+                <FaGithub color='#e9ecef' />
               </SocialButton>
             </Stack>
           </Container>
@@ -179,7 +179,7 @@ const useStyles = () => {
       height: '450px',
       bgRepeat: 'no-repeat',
       bgSize: 'cover',
-      mt: '50px',
+      // mt: '50px',
       pt: 10,
     },
     logoFont: {

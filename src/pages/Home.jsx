@@ -60,7 +60,7 @@ const Home = () => {
           <Box w={'100%'} {...root}>
             <Flex
               {...homeBox}
-              bgImage="url('/images/Hero-section-Background.png')"
+              bgImage="url('/images/Hero-Fo.jpeg')"
             >
               <Suspense fallback={<Spinner size="sm" />}>
                 <Container>
@@ -73,17 +73,12 @@ const Home = () => {
                       alignItems={{ base: 'center', md: 'flex-start' }}
                       mt="80px"
                     >
-                      <Text {...homeWelcomeText} color="black">
-                        Designed to protect protocols and smart contracts from
-                        potential risks
+                      <Text {...homeWelcomeText} color="#e9ecef">
+                      Meticulously designed to shield against potential risks, ensuring your digital assets and transactions remain secured.
                       </Text>
 
-                      <Text {...joinText} color="black">
-                        With the increasing popularity of decentralized
-                        technologies, it has become increasingly important to
-                        ensure their security and stability. Our platform offers
-                        insurance coverage for these critical components of the
-                        decentralized ecosystem.
+                      <Text {...joinText} color="#e9ecef">
+                      With our innovative solutions, you can navigate the complexities of the blockchain ecosystem with confidence, knowing that your protocols are fortified against threats. Join us in shaping a safer future for decentralized technologies.
                       </Text>
                       <Suspense fallback={<Spinner size="sm" />}>
                         <ProsureButton
@@ -93,7 +88,7 @@ const Home = () => {
                             height: ['50px'],
                             mt: { base: null, md: '10px' },
                             color: 'white',
-                            bg: 'ctaBg',
+                            bgGradient:'linear(to-r, #765fff, #b796ff)',
                             fontWeight: '400',
                           }}
                           onCLick={() => {
@@ -121,179 +116,182 @@ const Home = () => {
               </Suspense>
             </Flex>
 
-            {/*  ------------------------------------ Section 2 ------------------------- */}
-            <Flex p="50px">
-              <Suspense fallback={<Spinner size="sm" />}>
-                <Container>
-                  <HStack {...outerBox2}>
-                    {/* LEFT */}
-                    <VStack
-                      {...homeInnerBox2}
-                      display={{ base: 'none', md: 'flex' }}
-                      pos={'relative'}
-                    >
-                      <Image
-                        src={LockDexImage}
-                        // pos={"absolute"}
-                        // w={"300px"}
-                        // h={"300px"}
-                        right={'60px'}
-                        bottom={'50px'}
-                      />
-                    </VStack>
-                    <Spacer mr="20px" />
-                    {/* RIGHT */}
-                    <Flex
-                      {...homeInnerBox1}
-                      flexDir={'column'}
-                      display={{ base: 'none', md: 'flex' }}
-                      alignItems={{ base: 'center', md: 'flex-start' }}
-                      mt="80px"
-                    >
-                      <Text {...homeWelcomeText} color="black">
-                        Decentralized and trustless
-                      </Text>
+            <Box bg={'#010103'} >
+               {/*  ------------------------------------ Section 2 ------------------------- */}
+            <Flex p="50px" >
 
-                      <Text {...joinText} color="black" mt="20px">
-                        Our platform operates on blockchain technology, ensuring
-                        transparency and removing the need for intermediaries.
-                      </Text>
-                    </Flex>
-                  </HStack>
-                </Container>
-              </Suspense>
-            </Flex>
+<Suspense fallback={<Spinner size="sm" />}>
+  <Container>
+    <HStack {...outerBox2}>
+      {/* LEFT */}
+      <VStack
+        {...homeInnerBox2}
+        display={{ base: 'none', md: 'flex' }}
+        pos={'relative'}
+      >
+        <Image
+          src={LockDexImage}
+          // pos={"absolute"}
+          // w={"300px"}
+          // h={"300px"}
+          right={'60px'}
+          bottom={'50px'}
+        />
+      </VStack>
+      <Spacer mr="20px" />
+      {/* RIGHT */}
+      <Flex
+        {...homeInnerBox1}
+        flexDir={'column'}
+        display={{ base: 'none', md: 'flex' }}
+        alignItems={{ base: 'center', md: 'flex-start' }}
+        mt="80px"
+      >
+        <Text {...homeWelcomeText} color="#e9ecef">
+          Decentralized and trustless
+        </Text>
 
-            {/*  ------------------------------------ Section 3 ------------------------- */}
-            <Flex p="50px">
-              <Suspense fallback={<Spinner size="sm" />}>
-                <Container>
-                  <HStack {...outerBox2}>
-                    {/* LEFT */}
-                    <Flex
-                      {...homeInnerBox1}
-                      flexDir={'column'}
-                      display={{ base: 'none', md: 'flex' }}
-                      alignItems={{ base: 'center', md: 'flex-start' }}
-                      mt="80px"
-                    >
-                      <Text {...homeWelcomeText} color="black">
-                        Customizable coverage
-                      </Text>
+        <Text {...joinText} color="#868e96" mt="20px">
+          Our platform operates on blockchain technology, ensuring
+          transparency and removing the need for intermediaries.
+        </Text>
+      </Flex>
+    </HStack>
+  </Container>
+</Suspense>
+</Flex>
 
-                      <Text {...joinText} color="black" mt="20px">
-                        You can tailor your insurance coverage to your specific
-                        needs, choosing the parameters that matter most to you.
-                      </Text>
-                    </Flex>
+{/*  ------------------------------------ Section 3 ------------------------- */}
+<Flex p="50px">
+<Suspense fallback={<Spinner size="sm" />}>
+  <Container>
+    <HStack {...outerBox2}>
+      {/* LEFT */}
+      <Flex
+        {...homeInnerBox1}
+        flexDir={'column'}
+        display={{ base: 'none', md: 'flex' }}
+        alignItems={{ base: 'center', md: 'flex-start' }}
+        mt="80px"
+      >
+        <Text {...homeWelcomeText} color="#e9ecef">
+          Customizable coverage
+        </Text>
 
-                    {/* RIGHT */}
-                    <VStack
-                      {...homeInnerBox2}
-                      display={{ base: 'none', md: 'flex' }}
-                      pos={'relative'}
-                    >
-                      <Image
-                        src={SecureDexImage}
-                        // pos={"absolute"}
-                        // w={"300px"}
-                        // h={"300px"}
-                        right={'60px'}
-                        bottom={'50px'}
-                      />
-                    </VStack>
-                  </HStack>
-                </Container>
-              </Suspense>
-            </Flex>
+        <Text {...joinText} color="#868e96" mt="20px">
+          You can tailor your insurance coverage to your specific
+          needs, choosing the parameters that matter most to you.
+        </Text>
+      </Flex>
 
-            {/*  ------------------------------------ Section 4 ------------------------- */}
-            <Flex p="50px">
-              <Suspense fallback={<Spinner size="sm" />}>
-                <Container>
-                  <HStack {...outerBox2}>
-                    {/* LEFT */}
-                    <VStack
-                      {...homeInnerBox2}
-                      display={{ base: 'none', md: 'flex' }}
-                      pos={'relative'}
-                    >
-                      <Image
-                        src={MoneyDexImage}
-                        // pos={"absolute"}
-                        // w={"300px"}
-                        // h={"300px"}
-                        right={'60px'}
-                        bottom={'50px'}
-                      />
-                    </VStack>
+      {/* RIGHT */}
+      <VStack
+        {...homeInnerBox2}
+        display={{ base: 'none', md: 'flex' }}
+        pos={'relative'}
+      >
+        <Image
+          src={SecureDexImage}
+          // pos={"absolute"}
+          // w={"300px"}
+          // h={"300px"}
+          right={'60px'}
+          bottom={'50px'}
+        />
+      </VStack>
+    </HStack>
+  </Container>
+</Suspense>
+</Flex>
 
-                    {/* RIGHT */}
-                    <Flex
-                      {...homeInnerBox1}
-                      flexDir={'column'}
-                      display={{ base: 'none', md: 'flex' }}
-                      alignItems={{ base: 'center', md: 'flex-start' }}
-                      mt="80px"
-                    >
-                      <Text {...homeWelcomeText} color="black">
-                        Lower costs
-                      </Text>
+{/*  ------------------------------------ Section 4 ------------------------- */}
+<Flex p="50px">
+<Suspense fallback={<Spinner size="sm" />}>
+  <Container>
+    <HStack {...outerBox2}>
+      {/* LEFT */}
+      <VStack
+        {...homeInnerBox2}
+        display={{ base: 'none', md: 'flex' }}
+        pos={'relative'}
+      >
+        <Image
+          src={MoneyDexImage}
+          // pos={"absolute"}
+          // w={"300px"}
+          // h={"300px"}
+          right={'60px'}
+          bottom={'50px'}
+        />
+      </VStack>
 
-                      <Text {...joinText} color="black" mt="20px">
-                        Our decentralized platform removes the need for
-                        intermediaries, reducing costs and passing the savings
-                        on to you.
-                      </Text>
-                    </Flex>
-                  </HStack>
-                </Container>
-              </Suspense>
-            </Flex>
+      {/* RIGHT */}
+      <Flex
+        {...homeInnerBox1}
+        flexDir={'column'}
+        display={{ base: 'none', md: 'flex' }}
+        alignItems={{ base: 'center', md: 'flex-start' }}
+        mt="80px"
+      >
+        <Text {...homeWelcomeText} color="#e9ecef">
+          Lower costs
+        </Text>
 
-            {/*  ------------------------------------ Section 5 ------------------------- */}
-            <Flex>
-              <Suspense fallback={<Spinner size="sm" />}>
-                <Container>
-                  <HStack {...outerBox2}>
-                    {/* LEFT */}
-                    <Flex
-                      {...homeInnerBox1}
-                      flexDir={'column'}
-                      display={{ base: 'none', md: 'flex' }}
-                      alignItems={{ base: 'center', md: 'flex-start' }}
-                      mt="80px"
-                    >
-                      <Text {...homeWelcomeText} color="black">
-                        Quick and easy claims process
-                      </Text>
+        <Text {...joinText} color="#868e96" mt="20px">
+          Our decentralized platform removes the need for
+          intermediaries, reducing costs and passing the savings
+          on to you.
+        </Text>
+      </Flex>
+    </HStack>
+  </Container>
+</Suspense>
+</Flex>
 
-                      <Text {...joinText} color="black" mt="20px">
-                        In the event of a claim, our platform streamlines the
-                        process, ensuring that you receive compensation quickly
-                        and efficiently.
-                      </Text>
-                    </Flex>
+{/*  ------------------------------------ Section 5 ------------------------- */}
+<Flex>
+<Suspense fallback={<Spinner size="sm" />}>
+  <Container>
+    <HStack {...outerBox2}>
+      {/* LEFT */}
+      <Flex
+        {...homeInnerBox1}
+        flexDir={'column'}
+        display={{ base: 'none', md: 'flex' }}
+        alignItems={{ base: 'center', md: 'flex-start' }}
+        mt="80px"
+      >
+        <Text {...homeWelcomeText} color="#e9ecef">
+          Quick and easy claims process
+        </Text>
 
-                    {/* RIGHT */}
-                    <VStack
-                      {...homeInnerBox2}
-                      display={{ base: 'none', md: 'flex' }}
-                      pos={'relative'}
-                    >
-                      <Image
-                        src={ClaimDexImage}
-                        // pos={"absolute"}
-                        // w={"300px"}
-                        // h={"300px"}
-                        right={'60px'}
-                        bottom={'50px'}
-                      />
-                    </VStack>
-                  </HStack>
-                </Container>
-              </Suspense>
-            </Flex>
+        <Text {...joinText} color="#868e96" mt="20px">
+          In the event of a claim, our platform streamlines the
+          process, ensuring that you receive compensation quickly
+          and efficiently.
+        </Text>
+      </Flex>
+
+      {/* RIGHT */}
+      <VStack
+        {...homeInnerBox2}
+        display={{ base: 'none', md: 'flex' }}
+        pos={'relative'}
+      >
+        <Image
+          src={ClaimDexImage}
+          // pos={"absolute"}
+          // w={"300px"}
+          // h={"300px"}
+          right={'60px'}
+          bottom={'50px'}
+        />
+      </VStack>
+    </HStack>
+  </Container>
+</Suspense>
+</Flex>
+            </Box>
 
             {/* Footer area */}
             <Footer />
@@ -363,7 +361,6 @@ const useStyles = () => {
         base: '0%',
         md: '5%',
       },
-      mb: '30px',
     },
     homeBox2: {
       h: '750px',
