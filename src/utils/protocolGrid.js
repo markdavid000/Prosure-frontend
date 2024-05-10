@@ -1,0 +1,142 @@
+import { useNavigate } from "react-router-dom";
+
+ export const protocolCardData = [
+    {
+      id: "1",
+      icon: "",
+      label: "InstadApp",
+      link: "/protocols/:id",
+    },
+    {
+      id: "2",
+      icon: "",
+      label: "InstadApp",
+      link: "/protocols/:id",
+    },
+    {
+      id: "3",
+      icon: "",
+      label: "InstadApp",
+      link: "",
+    },
+    {
+      id: "4",
+      icon: "",
+      label: "InstadApp",
+      link: "",
+    },
+    {
+      id: "5",
+      icon: "",
+      label: "InstadApp",
+      link: "",
+    },
+    {
+      id: "6",
+      icon: "",
+      label: "InstadApp",
+      link: "",
+    },
+    {
+        id: "7",
+        icon: "",
+        label: "InstadApp",
+        link: "",
+      },
+      {
+        id: "8",
+        icon: "",
+        label: "InstadApp",
+        link: "",
+      },
+      {
+        id: "9",
+        icon: "",
+        label: "InstadApp",
+        link: "",
+      },
+      {
+        id: "10",
+        icon: "",
+        label: "InstadApp",
+        link: "",
+      },
+      {
+        id: "11",
+        icon: "",
+        label: "InstadApp",
+        link: "",
+      },
+      {
+        id: "12",
+        icon: "",
+        label: "InstadApp",
+        link: "",
+      },
+      {
+        id: "13",
+        icon: "",
+        label: "InstadApp",
+        link: "",
+      },
+      {
+        id: "14",
+        icon: "",
+        label: "InstadApp",
+        link: "",
+      },
+      {
+        id: "15",
+        icon: "",
+        label: "InstadApp",
+        link: "",
+      },
+      {
+        id: "16",
+        icon: "",
+        label: "InstadApp",
+        link: "",
+      },
+      {
+        id: "17",
+        icon: "",
+        label: "InstadApp",
+        link: "",
+      },
+      {
+        id: "18",
+        icon: "",
+        label: "InstadApp",
+        link: "",
+      },
+      {
+        id: "19",
+        icon: "",
+        label: "InstadApp",
+        link: "",
+      },
+      {
+        id: "20",
+        icon: "",
+        label: "InstadApp",
+        link: "",
+      },
+      {
+        id: "21",
+        icon: "",
+        label: "InstadApp",
+        link: "",
+      },
+      {
+          id: "22",
+          icon: "",
+          label: "InstadApp",
+          link: "",
+        },
+        {
+          id: "23",
+          icon: "",
+          label: "InstadApp",
+          link: "",
+        },
+  ];
