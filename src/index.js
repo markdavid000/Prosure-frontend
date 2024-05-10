@@ -13,33 +13,30 @@ import '@rainbow-me/rainbowkit/styles.css';
 import { getDefaultWallets, RainbowKitProvider } from '@rainbow-me/rainbowkit';
 import { WagmiConfig, configureChains, createClient } from 'wagmi';
 import { jsonRpcProvider } from 'wagmi/providers/jsonRpc';
-import FantomLogo from '../src/assets/fantomlogo.svg';
 
 // custom chain
-const prosureFantomTestnet = {
-  id: 4002,
-  name: 'Fantom',
-  network: 'fantomTestnet',
-  iconUrl: FantomLogo,
-  iconBackground: '#fff',
+const prosureSepoliaTestnet = {
+  id: 11155111,
+  name: 'Lisk',
+  network: 'LiskSepoliaTestnet',
   nativeCurrency: {
     decimals: 18,
-    name: 'Fantom',
-    symbol: 'FTM',
+    name: 'Sepolia',
+    symbol: 'ETH',
   },
   rpcUrls: {
-    default: 'https://rpc.ankr.com/fantom_testnet',
+    default: 'https://rpc.sepolia-api.lisk.com',
   },
   blockExplorers: {
-    etherscan: { name: 'FtmScan', url: 'https://testnet.ftmscan.com/' },
-    default: { name: 'FtmScan', url: 'https://testnet.ftmscan.com/' },
+    etherscan: { name: 'Lisk', url: 'https://sepolia-blockscout.lisk.com/' },
+    default: { name: 'Lisk', url: 'https://sepolia-blockscout.lisk.com/' },
   },
   contracts: {},
   testnet: true,
 };
 
 const { provider, chains } = configureChains(
-  [prosureFantomTestnet],
+  [prosureSepoliaTestnet],
   [jsonRpcProvider({ rpc: chain => ({ http: chain.rpcUrls.default }) })]
 );
 
