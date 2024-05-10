@@ -41,10 +41,10 @@ const Navbar = () => {
         // py="5"
         align="center"
         justify="space-between"
-        bg="navbarBgColor"
+        bg="#010103" 
         pos="sticky"
         top={0}
-        boxShadow="0px 4px 61px rgba(0, 0, 0, 0.1)"
+        // boxShadow="0px 4px 61px rgba(0, 0, 0, 0.1)"
         // zIndex={50000}
         p="20px 100px"
       >
@@ -61,6 +61,7 @@ const Navbar = () => {
                     variant="nav"
                     fontWeight={400}
                     _focus={{ color: 'ctaBg', fontWeight: '600' }}
+                    color={"#868e96"}
                   >
                     {' '}
                     {item.name}{' '}
@@ -77,6 +78,7 @@ const Navbar = () => {
                       boxShadow: 'none',
                       fontWeight: '600',
                     }}
+                    color={"#868e96"}
                     onMouseEnter={onOpen}
                     onMouseLeave={onClose}
                     w={{ lg: '135px' }}
@@ -131,6 +133,7 @@ const Navbar = () => {
                       boxShadow: 'none',
                       fontWeight: '600',
                     }}
+                    color={"#868e96"}
                     onMouseEnter={profileOnOpen}
                     onMouseLeave={profileOnClose}
                     w={{ lg: '135px' }}
