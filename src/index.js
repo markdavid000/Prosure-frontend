@@ -13,30 +13,32 @@ import '@rainbow-me/rainbowkit/styles.css';
 import { getDefaultWallets, RainbowKitProvider } from '@rainbow-me/rainbowkit';
 import { WagmiConfig, configureChains, createClient } from 'wagmi';
 import { jsonRpcProvider } from 'wagmi/providers/jsonRpc';
+import ethereumLogo from '../src/assets/ethereum 1.svg';
 
 // custom chain
-const prosureSepoliaTestnet = {
-  id: 11155111,
+const prosureLiskTestnet = {
+  id: 4202,
   name: 'Lisk',
-  network: 'LiskSepoliaTestnet',
+  iconUrl: ethereumLogo,
+  iconBackground: '#ff0',
   nativeCurrency: {
     decimals: 18,
-    name: 'Sepolia',
+    name: 'Ether',
     symbol: 'ETH',
   },
   rpcUrls: {
-    default: 'https://rpc.sepolia-api.lisk.com',
+    default: { HTTPS: ['https://rpc.sepolia-api.lisk.com'] },
   },
   blockExplorers: {
-    etherscan: { name: 'Lisk', url: 'https://sepolia-blockscout.lisk.com/' },
-    default: { name: 'Lisk', url: 'https://sepolia-blockscout.lisk.com/' },
+    etherscan: { name: 'lisk', url: 'https://sepolia-blockscout.lisk.com' },
+    default: { name: 'lisk', url: 'https://sepolia-blockscout.lisk.com' },
   },
   contracts: {},
   testnet: true,
 };
 
 const { provider, chains } = configureChains(
-  [prosureSepoliaTestnet],
+  [prosureLiskTestnet],
   [jsonRpcProvider({ rpc: chain => ({ http: chain.rpcUrls.default }) })]
 );
 

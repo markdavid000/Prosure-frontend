@@ -31,7 +31,7 @@ import Footer2 from '../components/Footer2';
 import arrowLeft from '../assets/arrow-left.svg';
 import SecureLogo from '../assets/SecureDex.svg';
 import webLogo from '../assets/link-2.svg';
-import FantomLogo from '../assets/fantomlogo.svg';
+import ethereumLogo from '../assets/ethereum 1.svg';
 import qrCodeLogo from '../assets/qr-wallet 1.svg';
 import walletLogo from '../assets/empty-wallet.svg';
 import calendarLogo from '../assets/calendar.svg';
@@ -285,8 +285,8 @@ const ProtocolDetails = () => {
               </Flex>
               {/* -------------------------- Detail 2 ----------------------- */}
               <Flex justify="center" alignItems="center">
-                <Avatar boxSize="30px" src={FantomLogo} mr="8px" />
-                <Text {...font5}>Fantom</Text>
+                <Avatar boxSize="30px" src={ethereumLogo} mr="8px" />
+                <Text {...font5}>ethereum</Text>
               </Flex>
 
               {/* -------------------------- Detail 3 ----------------------- */}
