@@ -53,7 +53,7 @@ const Footer3 = () => {
     <Box
       w={'100%'}
       padding={'50px'}
-      bgImage="url('/images/Footer-Background.png')"
+      bgGradient='linear(to-b, #010103, #010103, #011e4c, #403268)'
       p="50px"
     >
       <Box>
@@ -71,7 +71,7 @@ const Footer3 = () => {
             <Image src={prosureLogo} />
 
             <Flex my="25px">
-              <Text {...footerDesc}>
+              <Text {...footerDesc} color={'#868e96'}>
                 insurance coverage for these critical components of the
                 decentralized ecosystem
               </Text>
@@ -79,27 +79,27 @@ const Footer3 = () => {
           </Flex>
 
           <Flex flexDir="column">
-            <Text fontSize="18px" fontWeight="600" mb="20px">
+            <Text color={'#e9ecef'} fontSize="18px" fontWeight="600" mb="20px">
               Pages
             </Text>
             <Stack direction={'row'} spacing={6}>
               <Link to="/">
-                <Text fontSize="18px" fontWeight="500">
+                <Text color={'#868e96'} fontSize="18px" fontWeight="500">
                   Home
                 </Text>
               </Link>
               <Link to="/risk-assessor-dashboard">
-                <Text fontSize="18px" fontWeight="500">
+                <Text color={'#868e96'} fontSize="18px" fontWeight="500">
                   Dashboard
                 </Text>
               </Link>
               <Link to="/protocols">
-                <Text fontSize="18px" fontWeight="500">
+                <Text color={'#868e96'} fontSize="18px" fontWeight="500">
                   Protocols
                 </Text>
               </Link>
               <Link to="/claims">
-                <Text fontSize="18px" fontWeight="500">
+                <Text color={'#868e96'} fontSize="18px" fontWeight="500">
                   Claims
                 </Text>
               </Link>
@@ -123,18 +123,18 @@ const Footer3 = () => {
           justify={{ base: 'center', md: 'space-between' }}
           align={{ base: 'center', md: 'center' }}
         >
-          <Text>© {copyRightYear} Prosure. All rights reserved</Text>
-          <Stack direction={'row'} spacing={6}>
-            <SocialButton label={'Discord'} href={'#'}>
-              <FaDiscord />
-            </SocialButton>
-            <SocialButton label={'Twitter'} href={'#'}>
-              <FaTwitter />
-            </SocialButton>
-            <SocialButton label={'Github'} href={'#'}>
-              <FaGithub />
-            </SocialButton>
-          </Stack>
+          <Text color={'#868e96'}>© {copyRightYear} Prosure. All rights reserved</Text>
+            <Stack direction={'row'} spacing={6}>
+              <SocialButton label={'Discord'} href={'#'}>
+                <FaDiscord color='#868e96' />
+              </SocialButton>
+              <SocialButton label={'Twitter'} href={'#'}>
+                <FaTwitter color='#868e96' />
+              </SocialButton>
+              <SocialButton label={'Github'} href={'#'}>
+                <FaGithub color='#868e96' />
+              </SocialButton>
+            </Stack>
         </Container>
       </Box>
     </Box>

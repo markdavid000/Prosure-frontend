@@ -78,12 +78,12 @@ const Dashboard = () => {
       >
         <NavBar />
       </Suspense>
-    <Box w={"100%"} {...root}>
+    <Box  w={"100%"} {...root}>
       <Suspense
         fallback={<Spinner size="md" />}
       >
         <Container>
-        <Stack mt="20px" p="50px">
+        <Stack  p="50px" pt={'70px'}>
            
         <Flex>
               <SimpleGrid
@@ -567,7 +567,7 @@ export default Dashboard
 const useStyles = () => {
     return {
       root: {
-        backgroundColor: "#FBFDFF",
+        backgroundColor: "#040410",
         // w: "100%",
         // mt: "108px",
         // pt: "3%",
