@@ -68,7 +68,7 @@ const ClaimDetails = () => {
           </Suspense>
           <Box w={'100%'} {...root}>
             <Flex w={'100%'} flexDir="column">
-              <Link to="/governance">
+              <Link to="/governance-claims">
                 <Flex flexDir="row" p="60px" align="center">
                   <Image src={arrowLeft} boxSize="15px" mr="10px" />
                   <Text fontSize="16px" fontWeight="500">

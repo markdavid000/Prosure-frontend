@@ -45,7 +45,7 @@ const Navbar = () => {
         pos="sticky"
         top={0}
         // boxShadow="0px 4px 61px rgba(0, 0, 0, 0.1)"
-        // zIndex={50000}
+        zIndex={50000}
         p="20px 100px 0px 100px"
       >
         <Link to="/">
