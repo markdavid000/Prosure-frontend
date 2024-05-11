@@ -33,7 +33,7 @@ import { Link } from 'react-router-dom';
 import ReactPaginate from 'react-paginate';
 import '../constants/pagination.css';
 // import {useParams} from "react-router-dom";
-import { motion } from 'framer-motion';
+import { color, motion } from 'framer-motion';
 import arrowLeft from '../assets/arrow-left.svg';
 import walletIcon from '../assets/empty-wallet.svg';
 import { StopScreenMessageContext } from '../constants/stopScreenMessage';
@@ -149,7 +149,35 @@ const Protocols = () => {
             transition={{ duration: 0.75, ease: 'easeOut' }}
             exit={{ opacity: 1 }}
           >
-            <Flex {...protocolBox} bgImage="url('/images/Header-banner.png')">
+            <Flex {...protocolBox} position={'relative'} zIndex={'10'}>
+              <Box
+                position={'absolute'}
+                className="pattern"
+                w={'100%'}
+                h={'44vh'}
+                left={'0'}
+                top={'0'}
+                bottom={'0'}
+                right={'0'}
+              ></Box>
+              <Box
+                position={'absolute'}
+                w={'100%'}
+                h={'44vh'}
+                left={'0'}
+                top={'0'}
+                bottom={'0'}
+                bgGradient="linear(to-t, #040411, transparent)"
+              ></Box>
+              <Box
+                position={'absolute'}
+                w={'100%'}
+                h={'44vh'}
+                left={'0'}
+                top={'0'}
+                bottom={'0'}
+                bgGradient="linear(to-b, #040411, transparent)"
+              ></Box>
               <Suspense fallback={<Spinner size="sm" />}>
                 <Container>
                   <HStack {...outerBox}>
@@ -163,8 +191,8 @@ const Protocols = () => {
                               width: ['100%'],
                               height: ['50px'],
                               mt: { base: null, md: '10px' },
-                              color: 'white',
-                              bg: 'ctaBg',
+                              color: '#040411',
+                              bg: '#82fffc',
                               borderRadius: '10px',
                               fontWeight: '400',
                             }}
@@ -196,11 +224,17 @@ const Protocols = () => {
                       alignItems={{ base: 'center', md: 'flex-start' }}
                       mt="80px"
                     >
-                      <Text {...protocolWelcomeText} color="black">
+                      <Text {...protocolWelcomeText} color="#fff" zIndex={'10'}>
                         Protocol Insurance
                       </Text>
 
-                      <Text {...joinText} color="black" mt="20px" maxW="400px">
+                      <Text
+                        {...joinText}
+                        color="#fff"
+                        mt="20px"
+                        maxW="400px"
+                        zIndex={'10'}
+                      >
                         Buy insurance cover from protocols that are protected by
                         us or create a custom protocol cover!
                       </Text>
@@ -420,7 +454,8 @@ export default Protocols;
 const useStyles = () => {
   return {
     root: {
-      backgroundColor: '#FBFDFF',
+      backgroundColor: '#040411',
+      color: '#fff',
       // height: "10vh",
       // borderBottomLeftRadius: 20,
       // borderBottomRightRadius: 20,

@@ -36,7 +36,7 @@ const Claims = () => {
   return (
     <>
       {!isMobile ? (
-        <Box w="100%">
+        <Box w="100%" bg={'#040411'}>
           <Suspense
             // fallback={<Skeleton isLoaded={true} w={"100%"} h={"48px"}></Skeleton>}
             fallback={<Spinner size="lg" />}
@@ -51,15 +51,15 @@ const Claims = () => {
                     {/* --------------------- Insure Claims --------------------------- */}
                     <Flex flexDir="row" justify="space-between">
                       <Flex flexDir="column">
-                        <Text fontSize="16px" fontWeight="600">
+                        <Text fontSize="16px" fontWeight="600" color={'#fff'}>
                           Insurance Claims
                         </Text>
-                        <Text fontSize="14px" fontWeight="400">
+                        <Text fontSize="14px" fontWeight="400" color={'#fff'}>
                           Check out the previous insurance claims made.
                         </Text>
                       </Flex>
 
-                      <Flex justify="center" alignItems="center">
+                      <Flex justify="center" alignItems="center" color={'#fff'}>
                         <Text fontSize="18px" fontWeight="500" mr="4px">
                           Filterby status:
                         </Text>
@@ -79,19 +79,19 @@ const Claims = () => {
 
                     {/* ---------------------------------------- Tabs -------------------------- */}
                     <Flex flexDir="row" justify="space-between" mt="30px">
-                      <Text color="#352F30" fontWeight="600" fontSize="14px">
+                      <Text color="#a7a4a5" fontWeight="600" fontSize="14px">
                         Chain
                       </Text>
-                      <Text color="#645C5E" fontWeight="500" fontSize="14px">
+                      <Text color="#a7a4a5" fontWeight="500" fontSize="14px">
                         Claim ID
                       </Text>
-                      <Text color="#645C5E" fontWeight="500" fontSize="14px">
+                      <Text color="#a7a4a5" fontWeight="500" fontSize="14px">
                         Product
                       </Text>
-                      <Text color="#645C5E" fontWeight="500" fontSize="14px">
+                      <Text color="#a7a4a5" fontWeight="500" fontSize="14px">
                         Claim Amount
                       </Text>
-                      <Text color="#645C5E" fontWeight="500" fontSize="14px">
+                      <Text color="#a7a4a5" fontWeight="500" fontSize="14px">
                         Status
                       </Text>
                       <Text></Text>
@@ -115,18 +115,22 @@ const Claims = () => {
                               src={ethereumLogo}
                               mr="8px"
                             />
-                            <Text {...font5}>Ethereum</Text>
+                            <Text {...font5} color={'#fff'}>
+                              Ethereum
+                            </Text>
                           </Flex>
                         </Flex>
                         {/* -------------------------- Detail 2 Claim ID ----------------------- */}
                         <Flex justify="center" alignItems="center">
-                          <Text {...font5}>01</Text>
+                          <Text {...font5} color={'#fff'}>
+                            01
+                          </Text>
                         </Flex>
 
                         {/* -------------------------- Detail 3 Product----------------------- */}
                         <Flex>
                           <Avatar boxSize="30px" src={uniswapLogo} mr="8px" />
-                          <Flex flexDir="column">
+                          <Flex flexDir="column" color={'#fff'}>
                             <Text {...font3}>Uniswap</Text>
                             <Flex justify={'center'} alignItems="center">
                               <Image
@@ -140,7 +144,9 @@ const Claims = () => {
                         </Flex>
                         {/* -------------------------- Detail 5 ----------------------- */}
                         <Flex justify="center" alignItems="center">
-                          <Text {...font5}>4,000.00 USDT</Text>
+                          <Text {...font5} color={'#e3e3e3'}>
+                            4,000.00 USDT
+                          </Text>
                         </Flex>
 
                         {/* ----------------------------- withdrwal button ------------------- */}
@@ -162,12 +168,16 @@ const Claims = () => {
                           <HStack flexDir="row" justify="center">
                             {/* ------------------------ Button Action here ----------------- */}
                             <Center
-                              bg="#FFDCC1"
+                              bg="#1f1734"
                               borderRadius="10px"
                               p="6px 10px"
                               cursor="pointer"
                             >
-                              <Text fontSize="12px" fontWeight="500">
+                              <Text
+                                fontSize="12px"
+                                fontWeight="500"
+                                color={'#fff'}
+                              >
                                 Submitted
                               </Text>
                             </Center>
@@ -209,7 +219,7 @@ export default Claims;
 const useStyles = () => {
   return {
     root: {
-      backgroundColor: '#FBFDFF',
+      backgroundColor: '#040411',
       // w: "100%",
       // mt: "108px",
       // pt: "3%",
@@ -218,7 +228,7 @@ const useStyles = () => {
       // px: "0px",
     },
     root2: {
-      bg: 'white',
+      bg: '#403268',
       shadow: '0px 4px 61px rgba(0, 0, 0, 0.1)',
       borderRadius: '8px',
       h: '88px',
