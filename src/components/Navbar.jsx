@@ -69,7 +69,7 @@ const Navbar = () => {
                 </Link>
               ))}
               <Flex alignItems={'left'}>
-                <Menu isOpen={isOpen}>
+                <Menu isOpen={isOpen} zIndex={'10'}>
                   <MenuButton
                     px={2}
                     py={1}
@@ -208,7 +208,6 @@ export const useNavbarStyles = () => {
       fontWeight: '400',
       lineHeight: '20px',
       letterSpacing: '0.1px',
-      color: 'white',
     },
   };
 };

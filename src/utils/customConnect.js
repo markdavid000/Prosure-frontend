@@ -40,7 +40,8 @@ export const ConnectProsure = () => {
                   <Button
                     onClick={openConnectModal}
                     type="button"
-                    bgGradient="linear(to-r, #765fff, #b796ff)"
+                    bgGradient="linear(to-r, #ba98ff, #82fffc)"
+                    color={'#000'}
                     borderRadius="3xl"
                     {...ctaFont}
                     _hover={{
