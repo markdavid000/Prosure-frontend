@@ -109,14 +109,14 @@ const Dashboard = () => {
             <Flex flexDir="column">
               <Flex flexDir="row" mt="40px" justify="space-between">
                 <Flex flexDir="column">
-                  <Text fontSize="16px" fontWeight="600">My Insurance covers</Text>
-                  <Text fontSize="14px" fontWeight="400">All of your insured protocols and cover details</Text>
+                  <Text fontSize="16px" color={'#e9ecef'} fontWeight="600">My Insurance covers</Text>
+                  <Text fontSize="14px" color={'#e9ecef'} fontWeight="400">All of your insured protocols and cover details</Text>
                 </Flex>
              
                 <Flex flexDir="column">
-                <Button borderRadius="100px" bg="white" border="2px solid #3E7FDF"
+                <Button borderRadius="100px" bgGradient="linear(to-r, #403268, #765fff, #82fffc)"
                  _hover={{
-                    bg: "none"
+                   bg: "#d3f9d8"
                  }}
                 >
                  <Text fontSize="14px" fontWeight="500">View all covers</Text>
@@ -126,12 +126,12 @@ const Dashboard = () => {
               </Flex>
                 {/* ---------------------------------------- Tabs -------------------------- */}
                <Flex flexDir="row" justify="space-between" mt="30px">
-                <Text color="#352F30" fontWeight="600" fontSize="14px">Products</Text> 
-                <Text color="#645C5E" fontWeight="500" fontSize="14px">Chains</Text> 
-                <Text color="#645C5E" fontWeight="500" fontSize="14px">Covered Address</Text> 
-                <Text color="#645C5E" fontWeight="500" fontSize="14px">Covered period</Text> 
-                <Text color="#645C5E" fontWeight="500" fontSize="14px">Status</Text> 
-                <Text color="#645C5E" fontWeight="500" fontSize="14px">Links</Text> 
+                <Text color="#a7a4a5" fontWeight="600" fontSize="14px">Products</Text> 
+                <Text color="#a7a4a5" fontWeight="500" fontSize="14px">Chains</Text> 
+                <Text color="#a7a4a5" fontWeight="500" fontSize="14px">Covered Address</Text> 
+                <Text color="#a7a4a5" fontWeight="500" fontSize="14px">Covered period</Text> 
+                <Text color="#a7a4a5" fontWeight="500" fontSize="14px">Status</Text> 
+                <Text color="#a7a4a5" fontWeight="500" fontSize="14px">Links</Text> 
                 <Text></Text> 
                 {/* <Text></Text>  */}
                 {/* <Text></Text>  */}
@@ -143,7 +143,7 @@ const Dashboard = () => {
          <Flex flexDir="row" justify="space-between" mt="15px" {...root2} key={nanoid()}>
           {/* -------------------------- Detail 1 ----------------------- */}
             <>
-          <Flex>
+          <Flex color={'#e9ecef'}>
             <Avatar boxSize="20px" src={e.logo} mr="5px" />
             <Flex flexDir="column">
                 <Text {...font3}>{e.logoname}</Text>
@@ -170,8 +170,8 @@ const Dashboard = () => {
 
             {/* -------------------------- Detail Covered Period ----------------------- */}
             <Flex justify="center" alignItems="center">
-            <Button borderRadius="10px" bg="#DEFFD9">
-                 <Text fontSize="14px" fontWeight="500">Active</Text>
+            <Button borderRadius="20px" bg="#8ce99a">
+                 <Text fontSize="14px" color={'#343a40'} fontWeight="500">Active</Text>
                  </Button>
            </Flex>
            
@@ -180,7 +180,7 @@ const Dashboard = () => {
           {!buttonHere ? (
           <HStack flexDir="row" justify="space-between">                 
                  {/* ------------------------ Button Action here ----------------- */}
-                  <Center bg="#3E7FDF" borderRadius="100px" p="10px 15px" cursor="pointer">
+                  <Center bg="#1d0439" borderRadius="100px" p="10px 15px" cursor="pointer">
                     <Text fontSize="9px" color="white" fontWeight="600">Claim Insurance</Text>
                   </Center> 
           </HStack>
@@ -201,14 +201,14 @@ const Dashboard = () => {
             <Flex flexDir="column">
               <Flex flexDir="row" mt="50px" justify="space-between">
                 <Flex flexDir="column">
-                  <Text fontSize="16px" fontWeight="600">My Insurance claims</Text>
-                  <Text fontSize="14px" fontWeight="400">All of your insured protocols and cover details</Text>
+                  <Text fontSize="16px" color={'#e9ecef'} fontWeight="600">My Insurance claims</Text>
+                  <Text fontSize="14px" color={'#e9ecef'} fontWeight="400">All of your insured protocols and cover details</Text>
                 </Flex>
              
                 <Flex flexDir="column">
-                <Button borderRadius="100px" bg="white" border="2px solid #3E7FDF"
+                <Button borderRadius="100px" bgGradient="linear(to-r, #403268, #765fff, #82fffc)"
                  _hover={{
-                    bg: "none"
+                    bg: "#d3f9d8"
                  }}
                 >
                  <Text fontSize="14px" fontWeight="500">View all claims</Text>
@@ -218,12 +218,12 @@ const Dashboard = () => {
               </Flex>
                 {/* ---------------------------------------- Tabs -------------------------- */}
                <Flex flexDir="row" justify="space-between" mt="30px">
-                <Text color="#352F30" fontWeight="600" fontSize="14px">Products</Text> 
-                <Text color="#645C5E" fontWeight="500" fontSize="14px">Claim ID</Text> 
-                <Text color="#645C5E" fontWeight="500" fontSize="14px">Chains</Text> 
-                <Text color="#645C5E" fontWeight="500" fontSize="14px">Claim Amount</Text> 
-                <Text color="#645C5E" fontWeight="500" fontSize="14px">Status</Text> 
-                <Text color="#645C5E" fontWeight="500" fontSize="14px">Links</Text> 
+                <Text color="#a7a4a5" fontWeight="600" fontSize="14px">Products</Text> 
+                <Text color="#a7a4a5" fontWeight="500" fontSize="14px">Claim ID</Text> 
+                <Text color="#a7a4a5" fontWeight="500" fontSize="14px">Chains</Text> 
+                <Text color="#a7a4a5" fontWeight="500" fontSize="14px">Claim Amount</Text> 
+                <Text color="#a7a4a5" fontWeight="500" fontSize="14px">Status</Text> 
+                <Text color="#a7a4a5" fontWeight="500" fontSize="14px">Links</Text> 
                 <Text></Text> 
                 {/* <Text></Text>  */}
                 {/* <Text></Text>  */}
@@ -235,7 +235,7 @@ const Dashboard = () => {
          <Flex flexDir="row" justify="space-between" mt="15px" {...root2} key={nanoid()}>
           {/* -------------------------- Detail 1 ----------------------- */}
             <>
-          <Flex>
+          <Flex color={'#e9ecef'}>
             <Avatar boxSize="20px" src={e.logo} mr="5px" />
             <Flex flexDir="column">
                 <Text {...font3}>{e.logoname}</Text>
@@ -263,7 +263,7 @@ const Dashboard = () => {
 
           {/* ----------------------------- Claim Button ------------------- */}
           {!buttonHere ? (
-             <Button borderRadius="10px" bg="#DEFFD9">
+             <Button borderRadius="20px" bg="#8ce99a">
               <Text fontSize="12px" fontWeight="500">Completed</Text>
              </Button>
             ): (
@@ -279,7 +279,7 @@ const Dashboard = () => {
 
               {/* -------------------------- View Claim ----------------------- */}
               <Flex justify="center" alignItems="center">
-                 <Text fontSize="12px" color="#201A1B" fontWeight="600">View claim</Text>
+                 <Text fontSize="12px" color="#a7a4a5" fontWeight="600">View claim</Text>
            </Flex>
 
            <Flex justify="center" alignItems="center">
@@ -576,7 +576,7 @@ const useStyles = () => {
         // px: "0px",
       },
       root2: {
-        bg:"white",
+        bg:"#403268",
         shadow: "0px 4px 61px rgba(0, 0, 0, 0.1)",
         borderRadius: "8px",
         h: "88px",
@@ -611,13 +611,13 @@ const useStyles = () => {
         fontWeight: "500",
         fontSize: "12px",
         lineHeight: "24px",
-        color: "#645C5E"
+        color: "#868e96"
        },
        font6: {
         fontWeight: "500",
         fontSize: "12px",
         lineHeight: "24px",
-        color: "#487547"
+        color: "#868e96"
        },
        font7: {
         fontWeight: "500",

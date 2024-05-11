@@ -107,7 +107,7 @@ const Dashboard = () => {
 
                   <Flex flexDir="column">
                     {/* --------------------- Listed Protocol covers --------------------------- */}
-                    <Flex flexDir="column" mt="40px" color={'#fff'}>
+                    <Flex flexDir="column" mt="40px" color={'#e9ecef'}>
                       <Text fontSize="16px" fontWeight="600">
                         Listed Protocol covers
                       </Text>
@@ -150,7 +150,7 @@ const Dashboard = () => {
                       >
                         {/* -------------------------- Detail 1 ----------------------- */}
                         <>
-                          <Flex color={'#fff'}>
+                          <Flex color={'#e9ecef'}>
                             <Avatar boxSize="30px" src={e.logo} mr="8px" />
                             <Flex flexDir="column">
                               <Text {...font3}>{e.logoname}</Text>
@@ -166,7 +166,7 @@ const Dashboard = () => {
                           </Flex>
                           {/* -------------------------- Detail 2 Total Amount ----------------------- */}
                           <Flex justify="center" alignItems="center">
-                            <Text {...font5} color={'#e3e3e3'}>
+                            <Text {...font5} color={'#868e96'}>
                               {e.totalAmount}
                             </Text>
                           </Flex>
