@@ -84,7 +84,7 @@ export const ConnectProsure = () => {
                     style={{ display: 'flex', alignItems: 'center' }}
                     borderRadius="15px"
                     bg="white"
-                    _hover={{ bg: 'none' }}
+                    // _hover={{ bg: 'none', color: '#fff' }}
                     type="button"
                     fontSize="11px"
                     fontWeight="400"
