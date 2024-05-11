@@ -118,13 +118,13 @@ const Home = () => {
                       </Text>
                       <Suspense fallback={<Spinner size="sm" />}>
                         <ProsureButton
-                          name={'Get insured'}
+                          name={'Get Insured'}
                           rest={{
                             width: ['40%'],
                             height: ['50px'],
                             mt: { base: null, md: '10px' },
-                            color: 'white',
-                            bgGradient: 'linear(to-r, #765fff, #b796ff)',
+                            color: 'black',
+                            bgGradient: 'linear(to-r, #403268, #765fff, #82fffc)',
                             fontWeight: '400',
                           }}
                           onCLick={() => {
@@ -164,16 +164,18 @@ const Home = () => {
                         display={{ base: 'none', md: 'flex' }}
                         pos={'relative'}
                       >
+                        <Box w={'420px'} h={'250px'} borderRadius={'5px'} position={'relative'} left={'0'}  className='home-lock'>
                         <Image
-                          src={LockDexImage}
-                          // pos={"absolute"}
-                          // w={"300px"}
+                          src={'../images/Security-Home.png'}
+                          position={"absolute"}
+                          w={"210px"}
                           // h={"300px"}
-                          right={'60px'}
-                          bottom={'50px'}
+                          right={'100px'}
+                          bottom={'20px'}
                         />
+                        </Box>
                       </VStack>
-                      <Spacer mr="20px" />
+                      {/* <Spacer mr="5px" /> */}
                       {/* RIGHT */}
                       <Flex
                         {...homeInnerBox1}
@@ -183,13 +185,11 @@ const Home = () => {
                         mt="80px"
                       >
                         <Text {...homeWelcomeText} color="#e9ecef">
-                          Decentralized and trustless
+                          Ensures Trust And Decentralization
                         </Text>
 
                         <Text {...joinText} color="#868e96" mt="20px">
-                          Our platform operates on blockchain technology,
-                          ensuring transparency and removing the need for
-                          intermediaries.
+                          Prosure prioritizes trust, security, and decentralization to provide you with a reliable insurance solution.
                         </Text>
                       </Flex>
                     </HStack>
@@ -211,13 +211,11 @@ const Home = () => {
                         mt="80px"
                       >
                         <Text {...homeWelcomeText} color="#e9ecef">
-                          Customizable coverage
+                        Tailored Insurance
                         </Text>
 
                         <Text {...joinText} color="#868e96" mt="20px">
-                          You can tailor your insurance coverage to your
-                          specific needs, choosing the parameters that matter
-                          most to you.
+                        We understand that everyone's insurance needs are different. That's why we offer a range of customizable options to help you create the perfect insurance plan for your specific requirements.
                         </Text>
                       </Flex>
 
@@ -227,14 +225,16 @@ const Home = () => {
                         display={{ base: 'none', md: 'flex' }}
                         pos={'relative'}
                       >
+                        <Box w={'420px'} h={'250px'} borderRadius={'5px'} position={'relative'} left={'0'}  className='tailored-insurance'>
                         <Image
-                          src={SecureDexImage}
-                          // pos={"absolute"}
-                          // w={"300px"}
+                          src={'../images/Securer.png'}
+                          position={"absolute"}
+                          w={"190px"}
                           // h={"300px"}
-                          right={'60px'}
-                          bottom={'50px'}
+                          right={'110px'}
+                          bottom={'0'}
                         />
+                        </Box>
                       </VStack>
                     </HStack>
                   </Container>
@@ -252,14 +252,16 @@ const Home = () => {
                         display={{ base: 'none', md: 'flex' }}
                         pos={'relative'}
                       >
+                        <Box w={'420px'} h={'250px'} borderRadius={'5px'} position={'relative'} left={'0'}  className='dollar'>
                         <Image
-                          src={MoneyDexImage}
-                          // pos={"absolute"}
-                          // w={"300px"}
+                          src={'../images/Dollar.png'}
+                          position={"absolute"}
+                          w={"190px"}
                           // h={"300px"}
-                          right={'60px'}
-                          bottom={'50px'}
+                          right={'120px'}
+                          bottom={'28px'}
                         />
+                        </Box>
                       </VStack>
 
                       {/* RIGHT */}
@@ -271,13 +273,11 @@ const Home = () => {
                         mt="80px"
                       >
                         <Text {...homeWelcomeText} color="#e9ecef">
-                          Lower costs
+                        Affordable Rates
                         </Text>
 
                         <Text {...joinText} color="#868e96" mt="20px">
-                          Our decentralized platform removes the need for
-                          intermediaries, reducing costs and passing the savings
-                          on to you.
+                        Experience the peace of mind that comes with knowing you're protected by quality insurance coverage at an affordable price. Explore our website today and discover the value of insurance with Prosure.
                         </Text>
                       </Flex>
                     </HStack>
@@ -299,13 +299,11 @@ const Home = () => {
                         mt="80px"
                       >
                         <Text {...homeWelcomeText} color="#e9ecef">
-                          Quick and easy claims process
+                        Effortless Claims Handling
                         </Text>
 
                         <Text {...joinText} color="#868e96" mt="20px">
-                          In the event of a claim, our platform streamlines the
-                          process, ensuring that you receive compensation
-                          quickly and efficiently.
+                        Experience the convenience of hassle-free claims processing with Prosure. Trust us to handle your claims quickly, efficiently, and with the care and attention you deserve.
                         </Text>
                       </Flex>
 
@@ -315,14 +313,16 @@ const Home = () => {
                         display={{ base: 'none', md: 'flex' }}
                         pos={'relative'}
                       >
+                        <Box w={'420px'} h={'250px'} borderRadius={'5px'} position={'relative'} left={'0'}  className='claim'>
                         <Image
-                          src={ClaimDexImage}
-                          // pos={"absolute"}
-                          // w={"300px"}
+                          src={'../images/Claim.png'}
+                          position={"absolute"}
+                          w={"450px"}
                           // h={"300px"}
-                          right={'60px'}
-                          bottom={'50px'}
+                          right={'0'}
+                          top={'2px'}
                         />
+                        </Box>
                       </VStack>
                     </HStack>
                   </Container>

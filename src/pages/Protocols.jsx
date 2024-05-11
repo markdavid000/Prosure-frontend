@@ -192,8 +192,8 @@ const Protocols = () => {
                               height: ['50px'],
                               mt: { base: null, md: '10px' },
                               color: '#040411',
-                              bg: '#82fffc',
-                              borderRadius: '10px',
+                              bgGradient: "linear(to-r, #403268, #765fff, #82fffc)",
+                              borderRadius: '100px',
                               fontWeight: '400',
                             }}
                           />
@@ -311,7 +311,7 @@ const Protocols = () => {
                       >
                         <Image src={arrowLeft} boxSize="15px" />
                         <Spacer mr="5px" />
-                        <Text {...fontBold}>
+                        <Text {...fontBold} color={'White'}>
                           Create insurance cover for InstadApp protocol
                         </Text>
                       </Flex>
