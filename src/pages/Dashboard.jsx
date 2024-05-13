@@ -36,6 +36,10 @@ import Lottie from 'lottie-react';
 import warningAnimation from '../lottie/88003-blue-warning.json';
 import { StopScreenMessageContext } from '../constants/stopScreenMessage';
 import StopErrorMessage from '../components/StopErrorMessage';
+import { useContractRead } from 'wagmi';
+import { prosureSetup } from '../constants/interactionSetup';
+import uniswapLogo from '../assets/uniswap 1.svg';
+import { DecimalAbbr } from '../hooks/helpers';
 
 const style = {
   height: 300,
@@ -45,8 +49,29 @@ const NavBar = lazy(() => import('../components/Navbar'));
 const DashboardCardItem = lazy(() =>
   import('../components/DashboardCardItem/index')
 );
+const covers = [];
 
 const Dashboard = () => {
+  const { data: getProtocols } = useContractRead({
+    ...prosureSetup,
+    functionName: 'getAllProtocolData',
+  });
+
+  console.log(getProtocols, 'over here');
+
+  getProtocols.map(e => {
+    const cover = {
+      logo: uniswapLogo,
+      logoname: e[3],
+      subtile: e[5],
+      totalAmount: DecimalAbbr(e[0]._hex),
+      coverBought: '8,000.00 USDC',
+      totalProfit: '1,500.00 USDC',
+      dateCreated: '21/01/2024',
+    };
+    covers.push(cover);
+  });
+
   const { root, root2, font2, font3, font4, font5, font6 } = useStyles();
 
   const [buttonHere, setButtonHere] = useState(false);
@@ -70,7 +95,6 @@ const Dashboard = () => {
     onOpen: confirmLoadingOnOpen,
     onClose: confirmLoadingOnClose,
   } = useDisclosure();
-
   const { isMobile } = useContext(StopScreenMessageContext);
 
   return (
@@ -140,7 +164,7 @@ const Dashboard = () => {
                     <Divider border="1px solid #6750A4" mt="15px" />
 
                     {/* -------------------------------------- Tab Info -------------------------------- */}
-                    {listedCover.map((e, i) => (
+                    {covers.map((e, i) => (
                       <Flex
                         flexDir="row"
                         justify="space-between"
@@ -284,7 +308,7 @@ const Dashboard = () => {
                     <Divider border="1px solid #6750A4" mt="15px" />
 
                     {/* -------------------------------------- Tab Info -------------------------------- */}
-                    {listedCover.map((e, i) => (
+                    {covers.map((e, i) => (
                       <Flex
                         flexDir="row"
                         justify="space-between"
@@ -776,7 +800,8 @@ const useStyles = () => {
     font4: {
       fontWeight: '500',
       fontSize: '8px',
-      lineHeight: '24px',
+      lineHeight: '10px',
+      width: '20rem',
     },
     font5: {
       fontWeight: '500',

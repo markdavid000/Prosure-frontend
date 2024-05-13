@@ -680,7 +680,7 @@ const Governance = () => {
                     ) : governanceWaitLoading || governanceSuccess ? (
                       <Button
                         as="a"
-                        href={`https://testnet.ftmscan.com/tx/${governanceData?.hash}`}
+                        href={`https://sepolia-blockscout.lisk.com/tx/${governanceData?.hash}`}
                         target="_blank"
                         w="100%"
                         bg="#3a7cdf"
