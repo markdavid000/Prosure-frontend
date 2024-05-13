@@ -708,7 +708,7 @@ const ProtocolDetails = () => {
                   ) : buyCoverWaiting || buyCoverSuccess ? (
                     <Button
                       as="a"
-                      href={`https://testnet.ftmscan.com/tx/${buyCoverData?.hash}`}
+                      href={`https://sepolia-blockscout.lisk.com/tx/${buyCoverData?.hash}`}
                       target="_blank"
                       w="100%"
                       bg="#3a7cdf"

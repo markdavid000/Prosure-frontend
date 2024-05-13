@@ -32,8 +32,14 @@ export default function DrawerBg({
         finalFocusRef={btnRef}
       >
         <DrawerOverlay />
-        <DrawerContent alignItems="center">
-          <DrawerCloseButton alignSelf="end" mx={p} my={p} />
+        <DrawerContent alignItems="center" bg={'#403268'} pt={'5rem'}>
+          <DrawerCloseButton
+            alignSelf="end"
+            mx={p}
+            my={p}
+            fontSize={'1.2rem'}
+            color={'#ced4da'}
+          />
           <DrawerHeader my={p}>
             {/* <Text as="p"> {title} </Text> */}
             <HStack>

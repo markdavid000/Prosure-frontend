@@ -39,7 +39,11 @@ const Footer2 = () => {
   let copyRightYear = new Date().getFullYear();
 
   return (
-    <Box w={'100%'} bgImage="url('/images/Footer-Background.png')" p="50px">
+    <Box
+      w={'100%'}
+      bgGradient="linear(to-b, #040411, #011e4c, #403268)"
+      p="50px"
+    >
       <Divider border="1px solid #3E7FDF" />
 
       {/* Footer Links is here */}
@@ -56,16 +60,18 @@ const Footer2 = () => {
           justify={{ base: 'center', md: 'space-between' }}
           align={{ base: 'center', md: 'center' }}
         >
-          <Text>© {copyRightYear} Prosure. All rights reserved</Text>
+          <Text color={'#868e96'}>
+            © {copyRightYear} Prosure. All rights reserved
+          </Text>
           <Stack direction={'row'} spacing={6}>
             <SocialButton label={'Discord'} href={'#'}>
-              <FaDiscord />
+              <FaDiscord color="#868e96" />
             </SocialButton>
             <SocialButton label={'Twitter'} href={'#'}>
-              <FaTwitter />
+              <FaTwitter color="#868e96" />
             </SocialButton>
             <SocialButton label={'Github'} href={'#'}>
-              <FaGithub />
+              <FaGithub color="#868e96" />
             </SocialButton>
           </Stack>
         </Container>
