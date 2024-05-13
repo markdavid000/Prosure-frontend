@@ -139,13 +139,13 @@ const Protocols = () => {
           <Suspense fallback={<Spinner size="sm" />}>
             <NavBar />
           </Suspense>
+
           <Flex
             w={'100%'}
             {...root}
             flexDir="column"
             as={motion.div}
             initial={{ y: '100%' }}
-            animate={{ y: '0%' }}
             transition={{ duration: 0.75, ease: 'easeOut' }}
             exit={{ opacity: 1 }}
           >
@@ -192,7 +192,8 @@ const Protocols = () => {
                               height: ['50px'],
                               mt: { base: null, md: '10px' },
                               color: '#040411',
-                              bgGradient: "linear(to-r, #403268, #765fff, #82fffc)",
+                              bgGradient:
+                                'linear(to-r, #403268, #765fff, #82fffc)',
                               borderRadius: '100px',
                               fontWeight: '400',
                             }}

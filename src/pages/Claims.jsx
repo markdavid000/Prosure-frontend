@@ -22,6 +22,10 @@ import uniswapLogo from '../assets/uniswap 1.svg';
 import { StopScreenMessageContext } from '../constants/stopScreenMessage';
 import StopErrorMessage from '../components/StopErrorMessage';
 
+import { useContractRead, useAccount } from 'wagmi';
+import { prosureSetup } from '../constants/interactionSetup';
+import { DecimalAbbr } from '../hooks/helpers';
+
 const NavBar = lazy(() => import('../components/Navbar'));
 
 const Claims = () => {
@@ -32,6 +36,45 @@ const Claims = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   const { isMobile } = useContext(StopScreenMessageContext);
+
+  const { address } = useAccount();
+
+  let id;
+
+  const covers = [];
+
+  const { data: getProtocols } = useContractRead({
+    ...prosureSetup,
+    functionName: 'getAllProtocolData',
+  });
+
+  console.log(getProtocols, 'over here');
+
+  const { data: getAllUsersOfProtocol } = useContractRead({
+    ...prosureSetup,
+    functionName: 'getAllUsersOfProtocol',
+    arg: id,
+  });
+
+  getProtocols.map((e, i, address) => {
+    id = i;
+    let users = getAllUsersOfProtocol;
+    console.log(users);
+    // if (users.includes(address)) {
+    //   const cover = {
+    //     logo: uniswapLogo,
+    //     logoname: e[3],
+    //     subtile: e[5],
+    //     totalAmount: DecimalAbbr(e[0]._hex),
+    //     coverBought: '8,000.00 USDC',
+    //     totalProfit: '1,500.00 USDC',
+    //     dateCreated: '21/01/2024',
+    //   };
+    //   covers.push(cover);
+    // }
+    console.log(covers);
+    return covers;
+  });
 
   return (
     <>

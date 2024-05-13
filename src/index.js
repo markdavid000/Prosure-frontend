@@ -20,14 +20,14 @@ const prosureLiskTestnet = {
   id: 4202,
   name: 'Lisk',
   iconUrl: ethereumLogo,
-  iconBackground: '#ff0',
+  iconBackground: '#334424',
   nativeCurrency: {
     decimals: 18,
     name: 'Ether',
     symbol: 'ETH',
   },
   rpcUrls: {
-    default: { HTTPS: ['https://rpc.sepolia-api.lisk.com'] },
+    default: 'https://rpc.sepolia-api.lisk.com',
   },
   blockExplorers: {
     etherscan: { name: 'lisk', url: 'https://sepolia-blockscout.lisk.com' },

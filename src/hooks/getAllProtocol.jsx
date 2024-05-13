@@ -7,6 +7,7 @@ export const GetProtocol = id => {
     functionName: 'getProtocolData',
     args: [id],
   });
+  console.log('ptotocols: ', data);
 
   return { data };
 };
