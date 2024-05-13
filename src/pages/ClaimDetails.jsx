@@ -68,8 +68,8 @@ const ClaimDetails = () => {
           </Suspense>
           <Box w={'100%'} {...root}>
             <Flex w={'100%'} flexDir="column">
-              <Link to="/governance">
-                <Flex flexDir="row" p="60px" align="center">
+              <Link to="/governance-claims">
+                <Flex flexDir="row" p="60px" align="center" color={'#e9ecef'}>
                   <Image src={arrowLeft} boxSize="15px" mr="10px" />
                   <Text fontSize="16px" fontWeight="500">
                     Back
@@ -89,11 +89,17 @@ const ClaimDetails = () => {
                           <Flex>
                             <Avatar boxSize="30px" src={uniswapLogo} mr="8px" />
                             <Flex flexDir="column">
-                              <Text fontSize="16px" fontWeight="600">
+                              <Text
+                                fontSize="16px"
+                                fontWeight="600"
+                                color={'#e9ecef'}
+                              >
                                 Uniswap protocol Claim
                               </Text>
                               {/* --------------- wallet address ----------------- */}
-                              <Text mt="8px">0x8b93...8b0F</Text>
+                              <Text mt="8px" color={'#e9ecef'}>
+                                0x8b93...8b0F
+                              </Text>
 
                               {/* -------------------- Button is action here------------------------------- */}
                               <HStack mt="10px">
@@ -109,7 +115,7 @@ const ClaimDetails = () => {
                                   </Text>
                                 </Center>
                                 <Text
-                                  color="#645C5E"
+                                  color="#9e9899"
                                   fontSize="14px"
                                   fontWeight="500"
                                 >
@@ -122,7 +128,7 @@ const ClaimDetails = () => {
                                 <Text
                                   fontSize="14px"
                                   textAlign="left"
-                                  color="#1C1B1F"
+                                  color={'#adb5bd'}
                                   fontWeight="400"
                                   maxWidth="400"
                                 >
@@ -159,7 +165,7 @@ const ClaimDetails = () => {
                                   <Text
                                     {...getCollapseProps()}
                                     fontSize="14px"
-                                    color="#1C1B1F"
+                                    color={'#adb5bd'}
                                     fontWeight="400"
                                   >
                                     If you have any questions or concerns please
@@ -170,7 +176,8 @@ const ClaimDetails = () => {
                                   </Text>
                                   <Text
                                     fontSize="14px"
-                                    fontWeight="500"
+                                    color={'#fff'}
+                                    fontWeight="600"
                                     {...getToggleProps({
                                       onClick: () =>
                                         setIsExpanded(prev => !prev),
@@ -188,12 +195,16 @@ const ClaimDetails = () => {
                             <HStack
                               flexDir="row"
                               justify="space-between"
-                              borderLeft="5px solid #FF897D"
-                              bg="linear-gradient(0deg, #FFFFFF, #FFFFFF), #FFFBFE"
+                              borderLeft="5px solid #ba98ff"
+                              bg="#0a0a24"
                               p="20px 40px"
                               borderRadius="8px"
                             >
-                              <Flex flexDir="column" mr="20px">
+                              <Flex
+                                flexDir="column"
+                                mr="20px"
+                                color={'#e9ecef'}
+                              >
                                 <Text fontSize="16px" fontWeight="600">
                                   Claim info.
                                 </Text>
@@ -227,7 +238,11 @@ const ClaimDetails = () => {
                                 </Text>
                               </Flex>
 
-                              <Flex flexDir="column" mr="20px">
+                              <Flex
+                                flexDir="column"
+                                mr="20px"
+                                color={'#9e9899'}
+                              >
                                 <Text>.</Text>
                                 <Flex alignItems="center" mt="10px">
                                   <Avatar
@@ -237,7 +252,7 @@ const ClaimDetails = () => {
                                   />
                                   <Text
                                     fontSize="14px"
-                                    color="#645C5E"
+                                    color="#9e9899"
                                     fontWeight="500"
                                   >
                                     ethereum
@@ -252,7 +267,7 @@ const ClaimDetails = () => {
                                 </Text>
                                 <Text
                                   fontSize="14px"
-                                  color="#645C5E"
+                                  color="#9e9899"
                                   fontWeight="500"
                                   mt="10px"
                                 >
@@ -260,7 +275,7 @@ const ClaimDetails = () => {
                                 </Text>
                                 <Text
                                   fontSize="14px"
-                                  color="#645C5E"
+                                  color="#9e9899"
                                   fontWeight="500"
                                   mt="10px"
                                 >
@@ -274,13 +289,17 @@ const ClaimDetails = () => {
                             <HStack
                               flexDir="row"
                               justify="space-between"
-                              borderLeft="5px solid #FF897D"
-                              bg="linear-gradient(0deg, #FFFFFF, #FFFFFF), #FFFBFE"
+                              borderLeft="5px solid #ba98ff"
+                              bg="#0a0a24"
                               p="20px 40px"
                               borderRadius="8px"
                               mt="40px"
                             >
-                              <Flex flexDir="column" mr="20px">
+                              <Flex
+                                flexDir="column"
+                                mr="20px"
+                                color={'#e9ecef'}
+                              >
                                 <Text fontSize="16px" fontWeight="600">
                                   Cover info.
                                 </Text>
@@ -328,7 +347,7 @@ const ClaimDetails = () => {
                                 </Text>
                               </Flex>
 
-                              <Flex flexDir="column" mr="20px">
+                              <Flex flexDir="column" mr="20px" color="#9e9899">
                                 <Text>.</Text>
                                 <Flex alignItems="center" mt="10px">
                                   <Avatar
@@ -338,7 +357,7 @@ const ClaimDetails = () => {
                                   />
                                   <Text
                                     fontSize="14px"
-                                    color="#645C5E"
+                                    color="#9e9899"
                                     fontWeight="500"
                                   >
                                     InstaDapp
@@ -352,7 +371,7 @@ const ClaimDetails = () => {
                                   />
                                   <Text
                                     fontSize="14px"
-                                    color="#645C5E"
+                                    color="#9e9899"
                                     fontWeight="500"
                                   >
                                     ethereum
@@ -374,7 +393,7 @@ const ClaimDetails = () => {
                                 </Text>
                                 <Text
                                   fontSize="14px"
-                                  color="#645C5E"
+                                  color="#9e9899"
                                   fontWeight="500"
                                   mt="10px"
                                 >
@@ -382,7 +401,7 @@ const ClaimDetails = () => {
                                 </Text>
                                 <Text
                                   fontSize="14px"
-                                  color="#645C5E"
+                                  color="#9e9899"
                                   fontWeight="500"
                                   mt="10px"
                                 >
@@ -390,7 +409,7 @@ const ClaimDetails = () => {
                                 </Text>
                                 <Text
                                   fontSize="14px"
-                                  color="#645C5E"
+                                  color="#9e9899"
                                   fontWeight="500"
                                   mt="10px"
                                 >
@@ -406,14 +425,20 @@ const ClaimDetails = () => {
                               align="start"
                               mt="40px"
                             >
-                              <Text fontSize="16px" fontWeight="600">
+                              <Text
+                                fontSize="16px"
+                                fontWeight="600"
+                                color={'#e9ecef'}
+                              >
                                 Cast your Vote
                               </Text>
                               <Flex flexDir="column" pt="24px">
                                 {/* ------------------------ Button Action here ----------------- */}
                                 <Button
                                   borderRadius="40px"
-                                  bg="white"
+                                  bgGradient={
+                                    'linear(to-r, #403268, #765fff, #82fffc)'
+                                  }
                                   boxShadow="0px 4px 61px rgba(0, 0, 0, 0.1)"
                                   width="400px"
                                   h="60px"
@@ -426,7 +451,9 @@ const ClaimDetails = () => {
                                 {/* ------------------------ Button Action here ----------------- */}
                                 <Button
                                   borderRadius="40px"
-                                  bg="white"
+                                  bgGradient={
+                                    'linear(to-r, #403268, #765fff, #82fffc)'
+                                  }
                                   boxShadow="0px 4px 61px rgba(0, 0, 0, 0.1)"
                                   width="400px"
                                   h="60px"
@@ -446,11 +473,15 @@ const ClaimDetails = () => {
                               align="start"
                               mt="20px"
                             >
-                              <Text fontSize="16px" fontWeight="600">
+                              <Text
+                                fontSize="16px"
+                                fontWeight="600"
+                                color={'#e9ecef'}
+                              >
                                 Current results
                               </Text>
 
-                              <Flex pt="24px">
+                              <Flex pt="24px" color={'#9e9899'}>
                                 {/* ------------------------ Progress Action here ----------------- */}
 
                                 <Flex flexDir="column">
@@ -521,14 +552,18 @@ const ClaimDetails = () => {
                             {/* ------------------------------- All Vote Numbers ------------------------------- */}
                             <Text fontSize="14px">1413</Text>
                           </Center>
-                          <Text fontWeight="600" fontSize="16px">
+                          <Text
+                            fontWeight="600"
+                            fontSize="16px"
+                            color={'#e9ecef'}
+                          >
                             Votes
                           </Text>
                         </Flex>
 
                         <Flex
                           flexDir="column"
-                          bg="white"
+                          bg="#403268"
                           boxShadow="2px 4px 30px rgba(109, 105, 105, 0.15)"
                           p="40px"
                           borderRadius="20px"
@@ -540,8 +575,9 @@ const ClaimDetails = () => {
                                 flexDir="row"
                                 justify="space-between"
                                 mt="30px"
+                                pb={'5px'}
                                 key={nanoid()}
-                                borderBottom="1px solid #CFC4C5"
+                                borderBottom="1px solid #040411"
                               >
                                 <Flex alignItems="center">
                                   <Avatar
@@ -551,7 +587,7 @@ const ClaimDetails = () => {
                                   />
                                   <Text
                                     fontWeight="600"
-                                    color="#645C5E"
+                                    color="#9e9899"
                                     fontSize="16px"
                                   >
                                     {e.address}
@@ -559,14 +595,14 @@ const ClaimDetails = () => {
                                 </Flex>
                                 <Text
                                   fontWeight="600"
-                                  color="#645C5E"
+                                  color="#9e9899"
                                   fontSize="16px"
                                 >
                                   {e.votedecision}
                                 </Text>
                                 <Text
                                   fontWeight="600"
-                                  color="#645C5E"
+                                  color="#9e9899"
                                   fontSize="16px"
                                 >
                                   {e.ensname}
@@ -598,7 +634,7 @@ export default ClaimDetails;
 const useStyles = () => {
   return {
     root: {
-      backgroundColor: '#FBFDFF',
+      backgroundColor: '#040411',
       // height: "10vh",
       // borderBottomLeftRadius: 20,
       // borderBottomRightRadius: 20,

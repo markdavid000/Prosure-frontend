@@ -21,6 +21,7 @@ import Footer from '../components/Footer';
 import { motion } from 'framer-motion';
 import { StopScreenMessageContext } from '../constants/stopScreenMessage';
 import StopErrorMessage from '../components/StopErrorMessage';
+import '../Global.css';
 
 const NavBar = lazy(() => import('../components/Navbar'));
 const ProsureButton = lazy(() => import('../components/ProsureButton'));
@@ -60,8 +61,38 @@ const Home = () => {
           <Box w={'100%'} {...root}>
             <Flex
               {...homeBox}
-              bgImage="url('/images/Hero-Fo.jpeg')"
+              bg={'#040411'}
+              position={'relative'}
+              zIndex={'10'}
             >
+              <Box
+                position={'absolute'}
+                className="pattern"
+                w={'100%'}
+                h={'100vh'}
+                left={'0'}
+                top={'0'}
+                bottom={'0'}
+                right={'0'}
+              ></Box>
+              <Box
+                position={'absolute'}
+                w={'100%'}
+                h={'100vh'}
+                left={'0'}
+                top={'0'}
+                bottom={'0'}
+                bgGradient="linear(to-t, #040411, transparent)"
+              ></Box>
+              <Box
+                position={'absolute'}
+                w={'100%'}
+                h={'100vh'}
+                left={'0'}
+                top={'0'}
+                bottom={'0'}
+                bgGradient="linear(to-b, #040411, transparent)"
+              ></Box>
               <Suspense fallback={<Spinner size="sm" />}>
                 <Container>
                   <HStack {...outerBox}>
@@ -73,22 +104,27 @@ const Home = () => {
                       alignItems={{ base: 'center', md: 'flex-start' }}
                       mt="80px"
                     >
-                      <Text {...homeWelcomeText} color="#e9ecef">
-                      Meticulously designed to shield against potential risks, ensuring your digital assets and transactions remain secured.
+                      <Text {...homeWelcomeText} color="#e9ecef" zIndex={'10'}>
+                        Your shield for secure digital protocols and
+                        transactions.
                       </Text>
 
-                      <Text {...joinText} color="#e9ecef">
-                      With our innovative solutions, you can navigate the complexities of the blockchain ecosystem with confidence, knowing that your protocols are fortified against threats. Join us in shaping a safer future for decentralized technologies.
+                      <Text {...joinText} color="#e9ecef" zIndex={'10'}>
+                        With our innovative solutions, you can navigate the
+                        complexities of the blockchain ecosystem with
+                        confidence, knowing that your protocols are fortified
+                        against threats. Join us in shaping a safer future for
+                        decentralized technologies.
                       </Text>
                       <Suspense fallback={<Spinner size="sm" />}>
                         <ProsureButton
-                          name={'Get insured'}
+                          name={'Get Insured'}
                           rest={{
                             width: ['40%'],
                             height: ['50px'],
                             mt: { base: null, md: '10px' },
-                            color: 'white',
-                            bgGradient:'linear(to-r, #765fff, #b796ff)',
+                            color: 'black',
+                            bgGradient: 'linear(to-r, #403268, #765fff, #82fffc)',
                             fontWeight: '400',
                           }}
                           onCLick={() => {
@@ -116,181 +152,182 @@ const Home = () => {
               </Suspense>
             </Flex>
 
-            <Box bg={'#010103'} >
-               {/*  ------------------------------------ Section 2 ------------------------- */}
-            <Flex p="50px" >
+            <Box bg={'#040411'}>
+              {/*  ------------------------------------ Section 2 ------------------------- */}
+              <Flex p="50px">
+                <Suspense fallback={<Spinner size="sm" />}>
+                  <Container>
+                    <HStack {...outerBox2}>
+                      {/* LEFT */}
+                      <VStack
+                        {...homeInnerBox2}
+                        display={{ base: 'none', md: 'flex' }}
+                        pos={'relative'}
+                      >
+                        <Box w={'420px'} h={'250px'} borderRadius={'5px'} position={'relative'} left={'0'}  className='home-lock'>
+                        <Image
+                          src={'../images/Security-Home.png'}
+                          position={"absolute"}
+                          w={"210px"}
+                          // h={"300px"}
+                          right={'100px'}
+                          bottom={'20px'}
+                        />
+                        </Box>
+                      </VStack>
+                      {/* <Spacer mr="5px" /> */}
+                      {/* RIGHT */}
+                      <Flex
+                        {...homeInnerBox1}
+                        flexDir={'column'}
+                        display={{ base: 'none', md: 'flex' }}
+                        alignItems={{ base: 'center', md: 'flex-start' }}
+                        mt="80px"
+                      >
+                        <Text {...homeWelcomeText} color="#e9ecef">
+                          Ensures Trust And Decentralization
+                        </Text>
 
-<Suspense fallback={<Spinner size="sm" />}>
-  <Container>
-    <HStack {...outerBox2}>
-      {/* LEFT */}
-      <VStack
-        {...homeInnerBox2}
-        display={{ base: 'none', md: 'flex' }}
-        pos={'relative'}
-      >
-        <Image
-          src={LockDexImage}
-          // pos={"absolute"}
-          // w={"300px"}
-          // h={"300px"}
-          right={'60px'}
-          bottom={'50px'}
-        />
-      </VStack>
-      <Spacer mr="20px" />
-      {/* RIGHT */}
-      <Flex
-        {...homeInnerBox1}
-        flexDir={'column'}
-        display={{ base: 'none', md: 'flex' }}
-        alignItems={{ base: 'center', md: 'flex-start' }}
-        mt="80px"
-      >
-        <Text {...homeWelcomeText} color="#e9ecef">
-          Decentralized and trustless
-        </Text>
+                        <Text {...joinText} color="#868e96" mt="20px">
+                          Prosure prioritizes trust, security, and decentralization to provide you with a reliable insurance solution.
+                        </Text>
+                      </Flex>
+                    </HStack>
+                  </Container>
+                </Suspense>
+              </Flex>
 
-        <Text {...joinText} color="#868e96" mt="20px">
-          Our platform operates on blockchain technology, ensuring
-          transparency and removing the need for intermediaries.
-        </Text>
-      </Flex>
-    </HStack>
-  </Container>
-</Suspense>
-</Flex>
+              {/*  ------------------------------------ Section 3 ------------------------- */}
+              <Flex p="50px">
+                <Suspense fallback={<Spinner size="sm" />}>
+                  <Container>
+                    <HStack {...outerBox2}>
+                      {/* LEFT */}
+                      <Flex
+                        {...homeInnerBox1}
+                        flexDir={'column'}
+                        display={{ base: 'none', md: 'flex' }}
+                        alignItems={{ base: 'center', md: 'flex-start' }}
+                        mt="80px"
+                      >
+                        <Text {...homeWelcomeText} color="#e9ecef">
+                        Tailored Insurance
+                        </Text>
 
-{/*  ------------------------------------ Section 3 ------------------------- */}
-<Flex p="50px">
-<Suspense fallback={<Spinner size="sm" />}>
-  <Container>
-    <HStack {...outerBox2}>
-      {/* LEFT */}
-      <Flex
-        {...homeInnerBox1}
-        flexDir={'column'}
-        display={{ base: 'none', md: 'flex' }}
-        alignItems={{ base: 'center', md: 'flex-start' }}
-        mt="80px"
-      >
-        <Text {...homeWelcomeText} color="#e9ecef">
-          Customizable coverage
-        </Text>
+                        <Text {...joinText} color="#868e96" mt="20px">
+                        We understand that everyone's insurance needs are different. That's why we offer a range of customizable options to help you create the perfect insurance plan for your specific requirements.
+                        </Text>
+                      </Flex>
 
-        <Text {...joinText} color="#868e96" mt="20px">
-          You can tailor your insurance coverage to your specific
-          needs, choosing the parameters that matter most to you.
-        </Text>
-      </Flex>
+                      {/* RIGHT */}
+                      <VStack
+                        {...homeInnerBox2}
+                        display={{ base: 'none', md: 'flex' }}
+                        pos={'relative'}
+                      >
+                        <Box w={'420px'} h={'250px'} borderRadius={'5px'} position={'relative'} left={'0'}  className='tailored-insurance'>
+                        <Image
+                          src={'../images/Securer.png'}
+                          position={"absolute"}
+                          w={"190px"}
+                          // h={"300px"}
+                          right={'110px'}
+                          bottom={'0'}
+                        />
+                        </Box>
+                      </VStack>
+                    </HStack>
+                  </Container>
+                </Suspense>
+              </Flex>
 
-      {/* RIGHT */}
-      <VStack
-        {...homeInnerBox2}
-        display={{ base: 'none', md: 'flex' }}
-        pos={'relative'}
-      >
-        <Image
-          src={SecureDexImage}
-          // pos={"absolute"}
-          // w={"300px"}
-          // h={"300px"}
-          right={'60px'}
-          bottom={'50px'}
-        />
-      </VStack>
-    </HStack>
-  </Container>
-</Suspense>
-</Flex>
+              {/*  ------------------------------------ Section 4 ------------------------- */}
+              <Flex p="50px">
+                <Suspense fallback={<Spinner size="sm" />}>
+                  <Container>
+                    <HStack {...outerBox2}>
+                      {/* LEFT */}
+                      <VStack
+                        {...homeInnerBox2}
+                        display={{ base: 'none', md: 'flex' }}
+                        pos={'relative'}
+                      >
+                        <Box w={'420px'} h={'250px'} borderRadius={'5px'} position={'relative'} left={'0'}  className='dollar'>
+                        <Image
+                          src={'../images/Dollar.png'}
+                          position={"absolute"}
+                          w={"190px"}
+                          // h={"300px"}
+                          right={'120px'}
+                          bottom={'28px'}
+                        />
+                        </Box>
+                      </VStack>
 
-{/*  ------------------------------------ Section 4 ------------------------- */}
-<Flex p="50px">
-<Suspense fallback={<Spinner size="sm" />}>
-  <Container>
-    <HStack {...outerBox2}>
-      {/* LEFT */}
-      <VStack
-        {...homeInnerBox2}
-        display={{ base: 'none', md: 'flex' }}
-        pos={'relative'}
-      >
-        <Image
-          src={MoneyDexImage}
-          // pos={"absolute"}
-          // w={"300px"}
-          // h={"300px"}
-          right={'60px'}
-          bottom={'50px'}
-        />
-      </VStack>
+                      {/* RIGHT */}
+                      <Flex
+                        {...homeInnerBox1}
+                        flexDir={'column'}
+                        display={{ base: 'none', md: 'flex' }}
+                        alignItems={{ base: 'center', md: 'flex-start' }}
+                        mt="80px"
+                      >
+                        <Text {...homeWelcomeText} color="#e9ecef">
+                        Affordable Rates
+                        </Text>
 
-      {/* RIGHT */}
-      <Flex
-        {...homeInnerBox1}
-        flexDir={'column'}
-        display={{ base: 'none', md: 'flex' }}
-        alignItems={{ base: 'center', md: 'flex-start' }}
-        mt="80px"
-      >
-        <Text {...homeWelcomeText} color="#e9ecef">
-          Lower costs
-        </Text>
+                        <Text {...joinText} color="#868e96" mt="20px">
+                        Experience the peace of mind that comes with knowing you're protected by quality insurance coverage at an affordable price. Explore our website today and discover the value of insurance with Prosure.
+                        </Text>
+                      </Flex>
+                    </HStack>
+                  </Container>
+                </Suspense>
+              </Flex>
 
-        <Text {...joinText} color="#868e96" mt="20px">
-          Our decentralized platform removes the need for
-          intermediaries, reducing costs and passing the savings
-          on to you.
-        </Text>
-      </Flex>
-    </HStack>
-  </Container>
-</Suspense>
-</Flex>
+              {/*  ------------------------------------ Section 5 ------------------------- */}
+              <Flex>
+                <Suspense fallback={<Spinner size="sm" />}>
+                  <Container>
+                    <HStack {...outerBox2}>
+                      {/* LEFT */}
+                      <Flex
+                        {...homeInnerBox1}
+                        flexDir={'column'}
+                        display={{ base: 'none', md: 'flex' }}
+                        alignItems={{ base: 'center', md: 'flex-start' }}
+                        mt="80px"
+                      >
+                        <Text {...homeWelcomeText} color="#e9ecef">
+                        Effortless Claims Handling
+                        </Text>
 
-{/*  ------------------------------------ Section 5 ------------------------- */}
-<Flex>
-<Suspense fallback={<Spinner size="sm" />}>
-  <Container>
-    <HStack {...outerBox2}>
-      {/* LEFT */}
-      <Flex
-        {...homeInnerBox1}
-        flexDir={'column'}
-        display={{ base: 'none', md: 'flex' }}
-        alignItems={{ base: 'center', md: 'flex-start' }}
-        mt="80px"
-      >
-        <Text {...homeWelcomeText} color="#e9ecef">
-          Quick and easy claims process
-        </Text>
+                        <Text {...joinText} color="#868e96" mt="20px">
+                        Experience the convenience of hassle-free claims processing with Prosure. Trust us to handle your claims quickly, efficiently, and with the care and attention you deserve.
+                        </Text>
+                      </Flex>
 
-        <Text {...joinText} color="#868e96" mt="20px">
-          In the event of a claim, our platform streamlines the
-          process, ensuring that you receive compensation quickly
-          and efficiently.
-        </Text>
-      </Flex>
-
-      {/* RIGHT */}
-      <VStack
-        {...homeInnerBox2}
-        display={{ base: 'none', md: 'flex' }}
-        pos={'relative'}
-      >
-        <Image
-          src={ClaimDexImage}
-          // pos={"absolute"}
-          // w={"300px"}
-          // h={"300px"}
-          right={'60px'}
-          bottom={'50px'}
-        />
-      </VStack>
-    </HStack>
-  </Container>
-</Suspense>
-</Flex>
+                      {/* RIGHT */}
+                      <VStack
+                        {...homeInnerBox2}
+                        display={{ base: 'none', md: 'flex' }}
+                        pos={'relative'}
+                      >
+                        <Box w={'420px'} h={'250px'} borderRadius={'5px'} position={'relative'} left={'0'}  className='claim'>
+                        <Image
+                          src={'../images/Claim.png'}
+                          position={"absolute"}
+                          w={"450px"}
+                          // h={"300px"}
+                          right={'0'}
+                          top={'2px'}
+                        />
+                        </Box>
+                      </VStack>
+                    </HStack>
+                  </Container>
+                </Suspense>
+              </Flex>
             </Box>
 
             {/* Footer area */}
@@ -345,10 +382,10 @@ const useStyles = () => {
       // zIndex: 3000000,
     },
     homeWelcomeText: {
-      fontSize: '34px',
+      fontSize: '40px',
       width: '100%',
-      fontWeight: '600',
-      lineHeight: '165%',
+      fontWeight: '700',
+      lineHeight: '140%',
       color: 'black',
     },
     homeBox: {

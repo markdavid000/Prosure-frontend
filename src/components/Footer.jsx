@@ -54,7 +54,7 @@ const Footer = () => {
     <Flex
       {...root}
       flexDir={'column'}
-      bgGradient='linear(to-b, #010103, #011e4c, #765fff, #b796ff)'
+      bgGradient='linear(to-b, #040410, #040410, #011e4c, #403268)'
       p="50px"
     >
       <Container>
@@ -70,7 +70,7 @@ const Footer = () => {
             <Image src={prosureLogo} />
 
             <Flex my="25px">
-              <Text {...footerDesc} color={'#adb5bd'}>
+              <Text {...footerDesc} color={'#868e96'}>
                 insurance coverage for these critical components of the
                 decentralized ecosystem
               </Text>
@@ -91,7 +91,7 @@ const Footer = () => {
                   }
                   fontWeight={i === 0 ? 600 : 400}
                   mt={i === 0 ? '10px' : '10px'}
-                  color={i === 0 ? '#e9ecef' : '#adb5bd'}
+                  color={i === 0 ? '#e9ecef' : '#868e96'}
                   href="#"
                 >
                   {e}
@@ -121,7 +121,7 @@ const Footer = () => {
               <Button
                 borderRadius="100px"
                 mt="10px"
-                bgGradient="linear(to-r, #765fff, #b796ff)"
+                bgGradient="linear(to-r, #403268, #765fff, #82fffc)"
                 {...ctaFont}
                 _hover={{
                   bg: 'linear-gradient(0deg, rgba(103, 80, 164, 0.14), rgba(103, 80, 164, 0.14)), #FFFBFE',
@@ -134,7 +134,7 @@ const Footer = () => {
           </Flex>
         </Flex>
 
-        <Divider border="1px solid #011e4c" />
+        <Divider border="1px solid #3E7FDF" />
 
         {/* Footer Links is here */}
         <Box
@@ -150,16 +150,16 @@ const Footer = () => {
             justify={{ base: 'center', md: 'space-between' }}
             align={{ base: 'center', md: 'center' }}
           >
-            <Text color={'#e9ecef'}>© {copyRightYear} Prosure. All rights reserved</Text>
+            <Text color={'#868e96'}>© {copyRightYear} Prosure. All rights reserved</Text>
             <Stack direction={'row'} spacing={6}>
               <SocialButton label={'Discord'} href={'#'}>
-                <FaDiscord color='#e9ecef' />
+                <FaDiscord color='#868e96' />
               </SocialButton>
               <SocialButton label={'Twitter'} href={'#'}>
-                <FaTwitter color='#e9ecef' />
+                <FaTwitter color='#868e96' />
               </SocialButton>
               <SocialButton label={'Github'} href={'#'}>
-                <FaGithub color='#e9ecef' />
+                <FaGithub color='#868e96' />
               </SocialButton>
             </Stack>
           </Container>

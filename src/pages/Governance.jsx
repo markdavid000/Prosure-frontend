@@ -48,6 +48,7 @@ import { ExternalLinkIcon } from '@chakra-ui/icons';
 
 import { StopScreenMessageContext } from '../constants/stopScreenMessage';
 import StopErrorMessage from '../components/StopErrorMessage';
+import { color } from 'framer-motion';
 
 const NavBar = lazy(() => import('../components/Navbar'));
 const ProsureButton = lazy(() => import('../components/ProsureButton'));
@@ -199,12 +200,41 @@ const Governance = () => {
           <Suspense fallback={<Spinner size="lg" />}>
             <NavBar />
           </Suspense>
-          <Box w={'100%'}>
+          <Box className='governance' w={'100%'}>
             <Flex
               flexDir="column"
               {...root}
-              bgImage="url('/images/noiselayer.png')"
+              bg={'#040411'}
             >
+
+<Box
+                position={'absolute'}
+                className="pattern_two"
+                w={'100%'}
+                h={'100vh'}
+                left={'0'}
+                top={'0'}
+                bottom={'0'}
+                right={'0'}
+              ></Box>
+              <Box
+                position={'absolute'}
+                w={'100%'}
+                h={'100vh'}
+                left={'0'}
+                top={'0'}
+                bottom={'0'}
+                bgGradient="linear(to-t, #040411, transparent)"
+              ></Box>
+              <Box
+                position={'absolute'}
+                w={'100%'}
+                h={'100vh'}
+                left={'0'}
+                top={'0'}
+                bottom={'0'}
+                bgGradient="linear(to-b, #040411, transparent)"
+              ></Box>
               <Suspense fallback={<Spinner size="sm" />}>
                 <Container>
                   <HStack
@@ -214,11 +244,11 @@ const Governance = () => {
                     alignItems="center"
                     flexDir="column"
                   >
-                    <Text {...textDesign} bgClip="text">
+                    <Text {...textDesign} bgClip="text" zIndex={'10'}>
                       Creating a new, fairer, and more secure future for
                       insurance.
                     </Text>
-                    <Text fontSize="24px" fontWeight="500" pb="34px">
+                    <Text fontSize="24px" color={'#868e96'} fontWeight="500" pb="34px" zIndex={'10'}>
                       As a DAO, we are owned and governed by our community. By
                       joining Prosure's DAO, you will have the opportunity to
                       directly shape the future of insurance and play an active
@@ -232,7 +262,7 @@ const Governance = () => {
                           height: ['50px'],
                           mt: { base: null, md: '10px' },
                           color: 'white',
-                          bg: 'ctaBg',
+                          bgGradient: "linear(to-r, #403268, #765fff, #82fffc)",
                           fontWeight: '400',
                         }}
                         onCLick={onOpen}
@@ -242,14 +272,15 @@ const Governance = () => {
                 </Container>
               </Suspense>
 
-              <Flex flexDir="row" justify="space-between" mt="40px">
+              <Flex flexDir="row" gap={'20px'} px={'32px'} justify="space-between" mt="40px">
                 <Flex
                   border="1px solid #837377"
-                  bg="#FFF0FC"
+                  bg="#fcc2d7"
+                  borderRadius={'10px'}
                   p="30px"
                   flexDir="column"
                 >
-                  <Text fontSize="23px" textAlign="start">
+                  <Text fontSize="20px" color={'#495057'} textAlign="start">
                     View and vote for claims and issues raised by insurers and
                     risk assessors.
                   </Text>
@@ -268,11 +299,12 @@ const Governance = () => {
 
                 <Flex
                   border="1px solid #837377"
-                  bg="#FFFEEC"
+                  bg="#f3d9fa"
+                  borderRadius={'10px'}
                   p="30px"
                   flexDir="column"
                 >
-                  <Text fontSize="23px" textAlign="start">
+                  <Text fontSize="20px" color={'#495057'} textAlign="start">
                     View all the members of our DAO and the role played in
                     shaping the future of Insurance.
                   </Text>
@@ -291,11 +323,12 @@ const Governance = () => {
 
                 <Flex
                   border="1px solid #837377"
-                  bg="#E9F2FF"
+                  bg="#d0ebff"
+                  borderRadius={'10px'}
                   p="30px"
                   flexDir="column"
                 >
-                  <Text fontSize="23px" textAlign="start">
+                  <Text fontSize="20px" color={'#495057'} textAlign="start">
                     View and manage your activities and contributions to the
                     Governance DAO
                   </Text>
@@ -315,7 +348,7 @@ const Governance = () => {
 
               <Flex {...homeBox} justify="center" align="center" mt="40px">
                 <Flex
-                  bg="linear-gradient(97.66deg, #0B354D 0%, #000000 100%)"
+                  bg="linear-gradient(97.66deg, #364fc7 0%, #403268 100%)"
                   borderRadius="20px"
                   // h="400px"
                   //  bgImage="url('/images/noiselayer.png')"
@@ -324,19 +357,19 @@ const Governance = () => {
                   flexDir="row"
                 >
                   <Flex flexDir="column" {...homeInnerBox1} justify="center">
-                    <Text color="white" fontSize="36px" fontWeight="600">
+                    <Text color="#ced4da" fontSize="33px" fontWeight="600">
                       Utilizing power of decentralized technology to
                       revolutionize the insurance industry.
                     </Text>
                     <Suspense fallback={<Spinner size="sm" />}>
                       {/* <Link to="/join"> */}
                       <Button
-                        bg="#3E7FDF"
+                        bgGradient="linear(to-r, #403268, #765fff,  #82fffc)"
                         mt="25px"
                         borderRadius="10px"
                         p="0px 6px"
                         w="30%"
-                        _hover={{ color: 'white' }}
+                        _hover={{ bg: 'linear-gradient(0deg, rgba(103, 80, 164, 0.14), rgba(103, 80, 164, 0.14)), #FFFBFE', color: 'white' }}
                         onClick={onOpen}
                       >
                         <Text fontSize="16px" color="white">
@@ -708,7 +741,8 @@ const useStyles = () => {
       fontWeight: '600',
       lineHeight: '165%',
       letterSpacing: '-0.02em',
-      bg: 'linear-gradient(97.66deg, rgba(50, 28, 107, 0.7) 0%, rgba(255, 53, 211, 0.7) 100%)',
+      color: '#e9ecef',
+      bg: 'linear-gradient(97.66deg, #e9ecef 0%, #82fffc 100%)',
       backgroundClip: 'text',
       textFillColor: 'transparent',
     },

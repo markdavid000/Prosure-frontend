@@ -41,12 +41,12 @@ const Navbar = () => {
         // py="5"
         align="center"
         justify="space-between"
-        bg="#010103" 
+        bg="#040411"
         pos="sticky"
         top={0}
         // boxShadow="0px 4px 61px rgba(0, 0, 0, 0.1)"
-        // zIndex={50000}
-        p="20px 100px"
+        zIndex={50000}
+        p="20px 100px 0px 100px"
       >
         <Link to="/">
           <Image src={prosureLogo} />
@@ -61,7 +61,7 @@ const Navbar = () => {
                     variant="nav"
                     fontWeight={400}
                     _focus={{ color: 'ctaBg', fontWeight: '600' }}
-                    color={"#868e96"}
+                    color={'#868e96'}
                   >
                     {' '}
                     {item.name}{' '}
@@ -69,7 +69,7 @@ const Navbar = () => {
                 </Link>
               ))}
               <Flex alignItems={'left'}>
-                <Menu isOpen={isOpen}>
+                <Menu isOpen={isOpen} zIndex={'10'}>
                   <MenuButton
                     px={2}
                     py={1}
@@ -78,7 +78,7 @@ const Navbar = () => {
                       boxShadow: 'none',
                       fontWeight: '600',
                     }}
-                    color={"#868e96"}
+                    color={'#868e96'}
                     onMouseEnter={onOpen}
                     onMouseLeave={onClose}
                     w={{ lg: '135px' }}
@@ -95,27 +95,36 @@ const Navbar = () => {
                     onMouseEnter={onOpen}
                     onMouseLeave={onClose}
                     mt={-1}
+                    bg={'#1f1734'}
                   >
                     <MenuItem
-                      _hover={{ bg: 'ctaBg', color: 'white' }}
+                      bg={'#1f1734'}
+                      color={'#fff'}
+                      _hover={{ bg: '#82fffc', color: '#000' }}
                       onClick={() => navigate('/governance')}
                     >
                       Governance
                     </MenuItem>
                     <MenuItem
-                      _hover={{ bg: 'ctaBg', color: 'white' }}
+                      bg={'#1f1734'}
+                      color={'#fff'}
+                      _hover={{ bg: '#82fffc', color: '#000' }}
                       onClick={() => navigate('/governance-claims')}
                     >
                       Proposals
                     </MenuItem>
                     <MenuItem
-                      _hover={{ bg: 'ctaBg', color: 'white' }}
+                      bg={'#1f1734'}
+                      color={'#fff'}
+                      _hover={{ bg: '#82fffc', color: '#000' }}
                       onClick={() => navigate('/dao-members')}
                     >
                       Members
                     </MenuItem>
                     <MenuItem
-                      _hover={{ bg: 'ctaBg', color: 'white' }}
+                      bg={'#1f1734'}
+                      color={'#fff'}
+                      _hover={{ bg: '#82fffc', color: '#000' }}
                       onClick={() => navigate('/dao-member-portal')}
                     >
                       Governance Profile
@@ -133,7 +142,7 @@ const Navbar = () => {
                       boxShadow: 'none',
                       fontWeight: '600',
                     }}
-                    color={"#868e96"}
+                    color={'#868e96'}
                     onMouseEnter={profileOnOpen}
                     onMouseLeave={profileOnClose}
                     w={{ lg: '135px' }}
@@ -150,15 +159,20 @@ const Navbar = () => {
                     onMouseEnter={profileOnOpen}
                     onMouseLeave={profileOnClose}
                     mt={-1}
+                    bg={'#1f1734'}
                   >
                     <MenuItem
-                      _hover={{ bg: 'ctaBg', color: 'white' }}
+                      bg={'#1f1734'}
+                      color={'#fff'}
+                      _hover={{ bg: '#82fffc', color: '#000' }}
                       onClick={() => navigate('/risk-assessor-dashboard')}
                     >
                       Dashboard
                     </MenuItem>
                     <MenuItem
-                      _hover={{ bg: 'ctaBg', color: 'white' }}
+                      bg={'#1f1734'}
+                      color={'#fff'}
+                      _hover={{ bg: '#82fffc', color: '#000' }}
                       onClick={() => navigate('/insurer-dashboard')}
                     >
                       Insurer Dashboard
@@ -194,7 +208,6 @@ export const useNavbarStyles = () => {
       fontWeight: '400',
       lineHeight: '20px',
       letterSpacing: '0.1px',
-      color: 'white',
     },
   };
 };
