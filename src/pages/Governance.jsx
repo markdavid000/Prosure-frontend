@@ -200,14 +200,14 @@ const Governance = () => {
           <Suspense fallback={<Spinner size="lg" />}>
             <NavBar />
           </Suspense>
-          <Box className='governance' w={'100%'}>
+          <Box className="governance" w={'100%'}>
             <Flex
               flexDir="column"
               {...root}
+              position={'relative'}
               bg={'#040411'}
             >
-
-<Box
+              <Box
                 position={'absolute'}
                 className="pattern_two"
                 w={'100%'}
@@ -248,7 +248,13 @@ const Governance = () => {
                       Creating a new, fairer, and more secure future for
                       insurance.
                     </Text>
-                    <Text fontSize="24px" color={'#868e96'} fontWeight="500" pb="34px" zIndex={'10'}>
+                    <Text
+                      fontSize="24px"
+                      color={'#868e96'}
+                      fontWeight="500"
+                      pb="34px"
+                      zIndex={'10'}
+                    >
                       As a DAO, we are owned and governed by our community. By
                       joining Prosure's DAO, you will have the opportunity to
                       directly shape the future of insurance and play an active
@@ -262,7 +268,7 @@ const Governance = () => {
                           height: ['50px'],
                           mt: { base: null, md: '10px' },
                           color: 'white',
-                          bgGradient: "linear(to-r, #403268, #765fff, #82fffc)",
+                          bgGradient: 'linear(to-r, #403268, #765fff, #82fffc)',
                           fontWeight: '400',
                         }}
                         onCLick={onOpen}
@@ -272,7 +278,13 @@ const Governance = () => {
                 </Container>
               </Suspense>
 
-              <Flex flexDir="row" gap={'20px'} px={'32px'} justify="space-between" mt="40px">
+              <Flex
+                flexDir="row"
+                gap={'20px'}
+                px={'32px'}
+                justify="space-between"
+                mt="40px"
+              >
                 <Flex
                   border="1px solid #837377"
                   bg="#fcc2d7"
@@ -369,7 +381,10 @@ const Governance = () => {
                         borderRadius="10px"
                         p="0px 6px"
                         w="30%"
-                        _hover={{ bg: 'linear-gradient(0deg, rgba(103, 80, 164, 0.14), rgba(103, 80, 164, 0.14)), #FFFBFE', color: 'white' }}
+                        _hover={{
+                          bg: 'linear-gradient(0deg, rgba(103, 80, 164, 0.14), rgba(103, 80, 164, 0.14)), #FFFBFE',
+                          color: 'white',
+                        }}
                         onClick={onOpen}
                       >
                         <Text fontSize="16px" color="white">

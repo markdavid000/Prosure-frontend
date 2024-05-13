@@ -149,7 +149,7 @@ const Protocols = () => {
             transition={{ duration: 0.75, ease: 'easeOut' }}
             exit={{ opacity: 1 }}
           >
-            <Flex {...protocolBox} position={'relative'} zIndex={'10'}>
+            <Flex {...protocolBox} position={'relative'}>
               <Box
                 position={'absolute'}
                 className="pattern"

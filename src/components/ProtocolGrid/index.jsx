@@ -24,7 +24,7 @@ const ProtocolGrid = ({
     <Stack
       {...root}
       as="button"
-      bg="#FFFFFF"
+      bg="#403268"
       _hover={{ boxShadow: '2xl' }}
       justify="center"
     >
@@ -45,7 +45,9 @@ const ProtocolGrid = ({
           <Text {...title2}>Chains</Text>
           <Flex mt="10px" justify="center" alignItems="center">
             <Avatar src={ethereumLogo} width="30px" h="30px" mr="10px" />
-            <Text {...subTitle}>ethereum</Text>
+            <Text {...subTitle} color={''}>
+              ethereum
+            </Text>
           </Flex>
         </Flex>
         <Flex flexDir="column">
@@ -103,9 +105,9 @@ const ProtocolGrid = ({
         </Flex>
         <Flex flexDir="column">
           <Button
-            color="white"
+            color="black"
             borderRadius="100px"
-            bg="ctaBg"
+            bg="#ba98ff"
             fontSize="14px"
             fontWeight={500}
             onClick={() => navigate(`/protocols/${link + 1}`)}
@@ -138,7 +140,7 @@ const useStyles = () => {
       fontWeight: '400',
       fontSize: '14px',
       lineHeight: '24px',
-      color: '#4C4546',
+      color: '#dde7f9',
     },
     title2: {
       fontWeight: '500',
