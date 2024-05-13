@@ -53,7 +53,7 @@ const Footer3 = () => {
     <Box
       w={'100%'}
       padding={'50px'}
-      bgGradient='linear(to-b, #010103, #010103, #011e4c, #403268)'
+      bgGradient="linear(to-b, #040411, #011e4c, #403268)"
       p="50px"
     >
       <Box>
@@ -123,18 +123,20 @@ const Footer3 = () => {
           justify={{ base: 'center', md: 'space-between' }}
           align={{ base: 'center', md: 'center' }}
         >
-          <Text color={'#868e96'}>© {copyRightYear} Prosure. All rights reserved</Text>
-            <Stack direction={'row'} spacing={6}>
-              <SocialButton label={'Discord'} href={'#'}>
-                <FaDiscord color='#868e96' />
-              </SocialButton>
-              <SocialButton label={'Twitter'} href={'#'}>
-                <FaTwitter color='#868e96' />
-              </SocialButton>
-              <SocialButton label={'Github'} href={'#'}>
-                <FaGithub color='#868e96' />
-              </SocialButton>
-            </Stack>
+          <Text color={'#868e96'}>
+            © {copyRightYear} Prosure. All rights reserved
+          </Text>
+          <Stack direction={'row'} spacing={6}>
+            <SocialButton label={'Discord'} href={'#'}>
+              <FaDiscord color="#868e96" />
+            </SocialButton>
+            <SocialButton label={'Twitter'} href={'#'}>
+              <FaTwitter color="#868e96" />
+            </SocialButton>
+            <SocialButton label={'Github'} href={'#'}>
+              <FaGithub color="#868e96" />
+            </SocialButton>
+          </Stack>
         </Container>
       </Box>
     </Box>

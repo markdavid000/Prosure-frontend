@@ -63,7 +63,7 @@ const Home = () => {
               {...homeBox}
               bg={'#040411'}
               position={'relative'}
-              zIndex={'10'}
+              // zIndex={'10'}
             >
               <Box
                 position={'absolute'}
@@ -124,7 +124,8 @@ const Home = () => {
                             height: ['50px'],
                             mt: { base: null, md: '10px' },
                             color: 'black',
-                            bgGradient: 'linear(to-r, #403268, #765fff, #82fffc)',
+                            bgGradient:
+                              'linear(to-r, #403268, #765fff, #82fffc)',
                             fontWeight: '400',
                           }}
                           onCLick={() => {
@@ -164,15 +165,22 @@ const Home = () => {
                         display={{ base: 'none', md: 'flex' }}
                         pos={'relative'}
                       >
-                        <Box w={'420px'} h={'250px'} borderRadius={'5px'} position={'relative'} left={'0'}  className='home-lock'>
-                        <Image
-                          src={'../images/Security-Home.png'}
-                          position={"absolute"}
-                          w={"210px"}
-                          // h={"300px"}
-                          right={'100px'}
-                          bottom={'20px'}
-                        />
+                        <Box
+                          w={'420px'}
+                          h={'250px'}
+                          borderRadius={'5px'}
+                          position={'relative'}
+                          left={'0'}
+                          className="home-lock"
+                        >
+                          <Image
+                            src={'../images/Security-Home.png'}
+                            position={'absolute'}
+                            w={'210px'}
+                            // h={"300px"}
+                            right={'100px'}
+                            bottom={'20px'}
+                          />
                         </Box>
                       </VStack>
                       {/* <Spacer mr="5px" /> */}
@@ -189,7 +197,9 @@ const Home = () => {
                         </Text>
 
                         <Text {...joinText} color="#868e96" mt="20px">
-                          Prosure prioritizes trust, security, and decentralization to provide you with a reliable insurance solution.
+                          Prosure prioritizes trust, security, and
+                          decentralization to provide you with a reliable
+                          insurance solution.
                         </Text>
                       </Flex>
                     </HStack>
@@ -211,11 +221,14 @@ const Home = () => {
                         mt="80px"
                       >
                         <Text {...homeWelcomeText} color="#e9ecef">
-                        Tailored Insurance
+                          Tailored Insurance
                         </Text>
 
                         <Text {...joinText} color="#868e96" mt="20px">
-                        We understand that everyone's insurance needs are different. That's why we offer a range of customizable options to help you create the perfect insurance plan for your specific requirements.
+                          We understand that everyone's insurance needs are
+                          different. That's why we offer a range of customizable
+                          options to help you create the perfect insurance plan
+                          for your specific requirements.
                         </Text>
                       </Flex>
 
@@ -225,15 +238,22 @@ const Home = () => {
                         display={{ base: 'none', md: 'flex' }}
                         pos={'relative'}
                       >
-                        <Box w={'420px'} h={'250px'} borderRadius={'5px'} position={'relative'} left={'0'}  className='tailored-insurance'>
-                        <Image
-                          src={'../images/Securer.png'}
-                          position={"absolute"}
-                          w={"190px"}
-                          // h={"300px"}
-                          right={'110px'}
-                          bottom={'0'}
-                        />
+                        <Box
+                          w={'420px'}
+                          h={'250px'}
+                          borderRadius={'5px'}
+                          position={'relative'}
+                          left={'0'}
+                          className="tailored-insurance"
+                        >
+                          <Image
+                            src={'../images/Securer.png'}
+                            position={'absolute'}
+                            w={'190px'}
+                            // h={"300px"}
+                            right={'110px'}
+                            bottom={'0'}
+                          />
                         </Box>
                       </VStack>
                     </HStack>
@@ -252,15 +272,22 @@ const Home = () => {
                         display={{ base: 'none', md: 'flex' }}
                         pos={'relative'}
                       >
-                        <Box w={'420px'} h={'250px'} borderRadius={'5px'} position={'relative'} left={'0'}  className='dollar'>
-                        <Image
-                          src={'../images/Dollar.png'}
-                          position={"absolute"}
-                          w={"190px"}
-                          // h={"300px"}
-                          right={'120px'}
-                          bottom={'28px'}
-                        />
+                        <Box
+                          w={'420px'}
+                          h={'250px'}
+                          borderRadius={'5px'}
+                          position={'relative'}
+                          left={'0'}
+                          className="dollar"
+                        >
+                          <Image
+                            src={'../images/Dollar.png'}
+                            position={'absolute'}
+                            w={'190px'}
+                            // h={"300px"}
+                            right={'120px'}
+                            bottom={'28px'}
+                          />
                         </Box>
                       </VStack>
 
@@ -273,11 +300,14 @@ const Home = () => {
                         mt="80px"
                       >
                         <Text {...homeWelcomeText} color="#e9ecef">
-                        Affordable Rates
+                          Affordable Rates
                         </Text>
 
                         <Text {...joinText} color="#868e96" mt="20px">
-                        Experience the peace of mind that comes with knowing you're protected by quality insurance coverage at an affordable price. Explore our website today and discover the value of insurance with Prosure.
+                          Experience the peace of mind that comes with knowing
+                          you're protected by quality insurance coverage at an
+                          affordable price. Explore our website today and
+                          discover the value of insurance with Prosure.
                         </Text>
                       </Flex>
                     </HStack>
@@ -299,11 +329,14 @@ const Home = () => {
                         mt="80px"
                       >
                         <Text {...homeWelcomeText} color="#e9ecef">
-                        Effortless Claims Handling
+                          Effortless Claims Handling
                         </Text>
 
                         <Text {...joinText} color="#868e96" mt="20px">
-                        Experience the convenience of hassle-free claims processing with Prosure. Trust us to handle your claims quickly, efficiently, and with the care and attention you deserve.
+                          Experience the convenience of hassle-free claims
+                          processing with Prosure. Trust us to handle your
+                          claims quickly, efficiently, and with the care and
+                          attention you deserve.
                         </Text>
                       </Flex>
 
@@ -313,15 +346,22 @@ const Home = () => {
                         display={{ base: 'none', md: 'flex' }}
                         pos={'relative'}
                       >
-                        <Box w={'420px'} h={'250px'} borderRadius={'5px'} position={'relative'} left={'0'}  className='claim'>
-                        <Image
-                          src={'../images/Claim.png'}
-                          position={"absolute"}
-                          w={"450px"}
-                          // h={"300px"}
-                          right={'0'}
-                          top={'2px'}
-                        />
+                        <Box
+                          w={'420px'}
+                          h={'250px'}
+                          borderRadius={'5px'}
+                          position={'relative'}
+                          left={'0'}
+                          className="claim"
+                        >
+                          <Image
+                            src={'../images/Claim.png'}
+                            position={'absolute'}
+                            w={'450px'}
+                            // h={"300px"}
+                            right={'0'}
+                            top={'2px'}
+                          />
                         </Box>
                       </VStack>
                     </HStack>

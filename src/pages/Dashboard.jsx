@@ -24,10 +24,9 @@ import {
   InputRightAddon,
   InputGroup,
 } from '@chakra-ui/react';
-import { Link } from 'react-router-dom';
 import Container from '../components/Container';
 import Footer from '../components/Footer2';
-import { dashCardData, listedCover } from '../utils/dashCard';
+import { dashCardData } from '../utils/dashCard';
 import { nanoid } from 'nanoid';
 import secureLogo from '../assets/shield-tick.svg';
 import walletIcon from '../assets/empty-wallet.svg';
@@ -72,9 +71,9 @@ const Dashboard = () => {
     covers.push(cover);
   });
 
-  const { root, root2, font2, font3, font4, font5, font6 } = useStyles();
+  const { root, root2, font3, font4, font5, font6 } = useStyles();
 
-  const [buttonHere, setButtonHere] = useState(false);
+  const [buttonHere] = useState(false);
 
   const { isOpen, onOpen, onClose } = useDisclosure();
 
