@@ -223,7 +223,7 @@ const ProtocolDetails = () => {
   return (
     <>
       {!isMobile ? (
-        <Box w={'100%'} backgroundColor="bg">
+        <Box w={'100%'} backgroundColor="#040411">
           <Suspense fallback={<Spinner size="sm" />}>
             <NavBar />
           </Suspense>
@@ -237,20 +237,24 @@ const ProtocolDetails = () => {
               >
                 <Image src={arrowLeft} boxSize="15px" />
                 <Spacer ml="10px" />
-                <Text {...fontBold}>Portfolio-based Cover Purchase</Text>
+                <Text {...fontBold} color={'#dde7f9'}>
+                  Portfolio-based Cover Purchase
+                </Text>
               </Flex>
 
               <Flex justify="center" alignItems="center">
-                <Text {...font}>Covercurrency:</Text>
+                <Text {...font} color={'#dde7f9'}>
+                  Covercurrency:
+                </Text>
                 <Spacer ml="10px" />
                 <Text
-                  border="1px solid #B9A7AA"
+                  border="1px solid #dde7f9"
                   borderRadius="10px"
                   h="2rem"
                   w="6rem"
                   textAlign="center"
                   py="0.2rem"
-                  color="#4C4546"
+                  color="#dde7f9"
                 >
                   USDC
                 </Text>
@@ -259,12 +263,22 @@ const ProtocolDetails = () => {
 
             {/* ---------------------------------------- Tabs -------------------------- */}
             <Flex flexDir="row" justify="space-between" mt="40px">
-              <Text {...font2}>Products</Text>
-              <Text {...font2}>Chains</Text>
-              <Text {...font2}>User ID/Covered Address </Text>
-              <Text {...font2}>Cover Amount</Text>
-              <Text {...font2}>Cover Period</Text>
-              <Text {...font2}></Text>
+              <Text {...font2} color={'#868e96'}>
+                Products
+              </Text>
+              <Text {...font2} color={'#868e96'}>
+                Chains
+              </Text>
+              <Text {...font2} color={'#868e96'}>
+                User ID/Covered Address{' '}
+              </Text>
+              <Text {...font2} color={'#868e96'}>
+                Cover Amount
+              </Text>
+              <Text {...font2} color={'#868e96'}>
+                Cover Period
+              </Text>
+              <Text {...font2} color={'#868e96'}></Text>
             </Flex>
             <Divider border="1px solid #645C5E" mt="15px" />
 
@@ -274,19 +288,23 @@ const ProtocolDetails = () => {
               <Flex>
                 <Avatar boxSize="30px" src={SecureLogo} mr="8px" />
                 <Flex flexDir="column">
-                  <Text {...font3}>
+                  <Text {...font3} color={'#9e9899'}>
                     {protocolDetails ? protocolDetails[4] : ''}
                   </Text>
                   <Flex justify={'center'} alignItems="center">
                     <Image src={webLogo} boxSize={'20px'} mr="4px" />
-                    <Text {...font4}>Smart contract vulnerability</Text>
+                    <Text {...font4} color={'#9e9899'}>
+                      Smart contract vulnerability
+                    </Text>
                   </Flex>
                 </Flex>
               </Flex>
               {/* -------------------------- Detail 2 ----------------------- */}
               <Flex justify="center" alignItems="center">
                 <Avatar boxSize="30px" src={ethereumLogo} mr="8px" />
-                <Text {...font5}>ethereum</Text>
+                <Text {...font5} color={'#9e9899'}>
+                  ethereum
+                </Text>
               </Flex>
 
               {/* -------------------------- Detail 3 ----------------------- */}
@@ -295,15 +313,15 @@ const ProtocolDetails = () => {
                   <Tooltip
                     hasArrow
                     label="Click to automatically paste cover address"
-                    bg="purple.50"
-                    color="black"
+                    bg="#0a0a24"
+                    color="#dde7f9"
                     aria-label="A tooltip"
                     placement="top"
                   >
                     <InputLeftAddon
-                      bg="white"
+                      bg="#0a0a24"
                       h="43px"
-                      border="1px solid #B9A7AA"
+                      border="1px solid #0a0a24"
                       _focus={{ boxShadow: 'none' }}
                       onClick={() => (address ? setCoverAddress(address) : ' ')}
                     >
@@ -321,11 +339,14 @@ const ProtocolDetails = () => {
                     placeholder="Enter the covered address"
                     h="43px"
                     w="200px"
-                    border="1px solid #B9A7AA"
+                    border="1px solid #0a0a24"
+                    borderTopLeftRadius={'0'}
+                    borderBottomLeftRadius={'0'}
+                    color={'#dde7f9'}
                     fontSize="12px"
                     fontWeight="medium"
                     _placeholder={{
-                      color: '#9E8C90',
+                      color: '#dde7f9',
                       fontSize: '10px',
                       fontWeight: 'semibold',
                     }}
@@ -340,13 +361,14 @@ const ProtocolDetails = () => {
               <Flex justify="center" alignItems="center">
                 <InputGroup>
                   <Input
-                    type="text"
+                    type="number"
                     placeholder="Enter the covered amount"
                     h="43px"
                     w="150px"
-                    border="1px solid #B9A7AA"
+                    border="1px solid #0a0a24"
+                    color={'#dde7f9'}
                     _placeholder={{
-                      color: '#9E8C90',
+                      color: '#dde7f9',
                       fontSize: '10px',
                       fontWeight: 'semibold',
                     }}
@@ -355,13 +377,13 @@ const ProtocolDetails = () => {
                     onChange={e => setCoverAmount(e.target.value)}
                   />
                   <InputRightAddon
-                    bg="footerBgColor"
+                    bg="#0a0a24"
                     h="43px"
-                    border="1px solid #B9A7AA"
+                    border="1px solid #0a0a24"
                     _focus={{ boxShadow: 'none' }}
                   >
                     <Flex justify="space-between" alignItems="center">
-                      <Text color="#4C4546" fontSize="10px" mr="5px">
+                      <Text color="#dde7f9" fontSize="10px" mr="5px">
                         USDC
                       </Text>
                       <Image src={walletLogo} boxSize="20px" />
@@ -376,11 +398,12 @@ const ProtocolDetails = () => {
                   <Select
                     variant="outline"
                     icon={<MdArrowDropDown />}
-                    border="1px solid #B9A7AA"
+                    border="1px solid #0a0a24"
+                    color="#dde7f9"
                     borderRadius="6px 0px 0px 6px"
                     h="43px"
                     _active={{
-                      border: '1px solid #B9A7AA',
+                      border: '1px solid #0a0a24',
                     }}
                     _focusVisible={{
                       border: '1px solid #537FE7',
@@ -388,7 +411,6 @@ const ProtocolDetails = () => {
                     onChange={e => setCoverPeriod(e.target.value)}
                     value={coverPeriod}
                     fontSize="11px"
-                    color="#9E8C90"
                     fontWeight="semibold"
                   >
                     <option style={{ display: 'none' }}>
@@ -426,13 +448,13 @@ const ProtocolDetails = () => {
                     </option>
                   </Select>
                   <InputRightAddon
-                    bg="footerBgColor"
+                    bg="#0a0a24"
                     h="43px"
                     focus={{ boxShadow: 'none' }}
-                    border="1px solid #B9A7AA"
+                    border="1px solid #0a0a24"
                   >
                     <Flex justify="space-between" alignItems="center">
-                      <Text color="#4C4546" fontSize="10px" mr="5px">
+                      <Text color="#dde7f9" fontSize="10px" mr="5px">
                         Days
                       </Text>
                       <Image src={calendarLogo} boxSize="20px" />
@@ -451,12 +473,12 @@ const ProtocolDetails = () => {
             >
               <Flex
                 flexDir={'column'}
-                bg="footerBgColor"
+                bg="#0a0a24"
                 p="20px 40px"
                 minWidth="30rem"
               >
                 <Flex justify="space-between" flexDir="row">
-                  <Flex flexDir="column" gap={2}>
+                  <Flex flexDir="column" gap={2} color={'#e9ecef'}>
                     <Text {...font7}>Cover amount left</Text>
                     <Text {...font7} mt="10px">
                       Percentage per cover
@@ -469,7 +491,12 @@ const ProtocolDetails = () => {
                     </Text>
                   </Flex>
 
-                  <Flex flexDir="column" textAlign="right" gap={2}>
+                  <Flex
+                    flexDir="column"
+                    textAlign="right"
+                    gap={2}
+                    color={'#9e9899'}
+                  >
                     <Text {...font6}>
                       {protocolDetails
                         ? DecimalAbbr(protocolDetails[2]._hex)
@@ -540,12 +567,14 @@ const ProtocolDetails = () => {
                 {/* ----------------------------- Check Box ---------------------------- */}
                 <Flex mb="20px">
                   <Checkbox
-                    border="#212121"
+                    border="#e9ecef"
                     onChange={e => setAgree(e.target.checked)}
                     size="lg"
                   >
-                    I agree to the terms and conditions set out and identified
-                    by Prosure.
+                    <Text color={'#e9ecef'}>
+                      I agree to the terms and conditions set out and identified
+                      by Prosure.
+                    </Text>
                   </Checkbox>
                 </Flex>
                 <Suspense fallback={<Spinner size="sm" />}>
@@ -556,8 +585,8 @@ const ProtocolDetails = () => {
                         width: ['40%'],
                         height: ['50px'],
                         mt: { base: null, md: '10px' },
-                        color: 'white',
-                        bg: 'ctaBg',
+                        color: 'black',
+                        bgGradient: 'linear(to-r, #403268, #765fff, #82fffc)',
                         fontWeight: '400',
                         px: '10rem',
                       }}
@@ -571,9 +600,9 @@ const ProtocolDetails = () => {
                     />
                   ) : (
                     <Button
-                      color="white"
+                      color="black"
                       width="40%"
-                      bg="rgba(62, 127, 223, 0.6)"
+                      bg="gray"
                       fontWeight="400"
                       height="50px"
                       mt={{ base: null, md: '10px' }}
@@ -753,7 +782,7 @@ export default ProtocolDetails;
 const useStyles = () => {
   return {
     root: {
-      bg: 'white',
+      bg: '#403268',
       shadow: '0px 4px 61px rgba(0, 0, 0, 0.1)',
       borderRadius: '8px',
       h: '88px',

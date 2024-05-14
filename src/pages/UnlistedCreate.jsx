@@ -205,13 +205,13 @@ const UnlistedCreate = () => {
                   <Image src={arrowLeft} boxSize="15px" />
                 </Link>
                 <Spacer mr="5px" />
-                <Text fontSize="18px" fontWeight="600">
+                <Text fontSize="18px" fontWeight="600" color={'#dde7f9'}>
                   Create insurance cover for unlisted protocol
                 </Text>
               </Flex>
             </Flex>
             <Flex gap={10}>
-              <Text fontSize="14px" fontWeight={500} mt="8px">
+              <Text fontSize="14px" fontWeight={500} mt="8px" color={'#dde7f9'}>
                 Please fill in the following information to list a protocol for
                 insurance
               </Text>
@@ -239,7 +239,7 @@ const UnlistedCreate = () => {
               <Flex flexDir="row" justify="space-between">
                 {/* ------------------------------- Input 1 ------------------------------- */}
                 <Flex flexDir="column" w="25rem">
-                  <Text fontSize="15px" fontWeight="500">
+                  <Text fontSize="15px" fontWeight="500" color={'#868e96'}>
                     Protocol name
                   </Text>
                   <Spacer />
@@ -251,10 +251,11 @@ const UnlistedCreate = () => {
                     <Input
                       placeholder="Enter protocol name"
                       borderRadius="0"
+                      color={'#dde7f9'}
                       border="0"
-                      borderBottom="1px solid #49454F"
+                      borderBottom="1px solid #403268"
                       _placeholder={{
-                        color: '#1C1B1F',
+                        color: '#9e9899',
                         justifySelf: 'flex-end',
                         fontSize: '10px',
                       }}
@@ -268,7 +269,7 @@ const UnlistedCreate = () => {
 
                 {/* ------------------------------- Input 2 ------------------------------- */}
                 <Flex flexDir="column" w="25rem">
-                  <Text fontSize="15px" fontWeight="500">
+                  <Text fontSize="15px" fontWeight="500" color={'#868e96'}>
                     Domain link
                   </Text>
                   <Spacer />
@@ -280,10 +281,11 @@ const UnlistedCreate = () => {
                     <Input
                       placeholder="Enter the link to the protocol"
                       borderRadius="0"
+                      color={'#dde7f9'}
                       border="0"
-                      borderBottom="1px solid #49454F"
+                      borderBottom="1px solid #403268"
                       _placeholder={{
-                        color: '#1C1B1F',
+                        color: '#9e9899',
                         justifySelf: 'flex-end',
                         fontSize: '10px',
                       }}
@@ -300,7 +302,7 @@ const UnlistedCreate = () => {
               <Flex flexDir="row" justify="space-between" mt="30px">
                 {/* ------------------------------- Input 3 ------------------------------- */}
                 <Flex flexDir="column" w="31.5rem">
-                  <Text fontSize="15px" fontWeight="500">
+                  <Text fontSize="15px" fontWeight="500" color={'#868e96'}>
                     Amount Covered
                   </Text>
                   <Spacer />
@@ -312,10 +314,11 @@ const UnlistedCreate = () => {
                     <Input
                       placeholder="Enter amount of insurance cover"
                       borderRadius="0"
+                      color={'#dde7f9'}
                       border="0"
-                      borderBottom="1px solid #49454F"
+                      borderBottom="1px solid #403268"
                       _placeholder={{
-                        color: '#1C1B1F',
+                        color: '#9e9899',
                         justifySelf: 'flex-end',
                         fontSize: '10px',
                       }}
@@ -325,12 +328,8 @@ const UnlistedCreate = () => {
                       onChange={e => setAmountCovered(e.target.value)}
                       name="amountCovered"
                     />
-                    <InputRightAddon
-                      borderRadius={0}
-                      border="0"
-                      bg="footerBgColor"
-                    >
-                      <Text fontSize="12px" fontWeight={500}>
+                    <InputRightAddon borderRadius={0} border="0" bg="#b67ed9">
+                      <Text fontSize="12px" fontWeight={500} color={'#dde7f9'}>
                         USDC
                       </Text>
                       <Image src={walletIcon} ml="4px" boxSize="20px" />
@@ -340,7 +339,7 @@ const UnlistedCreate = () => {
 
                 {/* ------------------------------- Input 4 ------------------------------- */}
                 <Flex flexDir="column" w="25rem">
-                  <Text fontSize="15px" fontWeight="500">
+                  <Text fontSize="15px" fontWeight="500" color={'#868e96'}>
                     Description
                   </Text>
                   <Spacer />
@@ -352,10 +351,11 @@ const UnlistedCreate = () => {
                     <Input
                       placeholder="Enter the description of the protocol"
                       borderRadius="0"
+                      color={'#dde7f9'}
                       border="0"
-                      borderBottom="1px solid #49454F"
+                      borderBottom="1px solid #403268"
                       _placeholder={{
-                        color: '#1C1B1F',
+                        color: '#9e9899',
                         justifySelf: 'flex-end',
                         fontSize: '10px',
                       }}
@@ -371,7 +371,7 @@ const UnlistedCreate = () => {
 
               {/* ------------------------------- Input 5 ------------------------------- */}
               <Flex flexDir="column" mt="30px">
-                <Text fontSize="15px" fontWeight="500">
+                <Text fontSize="15px" fontWeight="500" color={'#dde7f9'}>
                   Select the risk level of the protocol
                 </Text>
                 <Spacer />
@@ -388,20 +388,20 @@ const UnlistedCreate = () => {
                     <SliderMark
                       value={sliderValue}
                       textAlign="center"
-                      color="black"
+                      color="#dde7f9"
                       mt="-10"
                       ml={sliderValue === 0 ? 0 : -10}
                       w="12"
                     >
                       {sliderValue}%
                     </SliderMark>
-                    <SliderTrack>
-                      <SliderFilledTrack border="2px solid #837377" />
+                    <SliderTrack bg={'#403268'}>
+                      <SliderFilledTrack bg={'#b67ed9'} />
                     </SliderTrack>
                     <SliderThumb
-                      bg="#9BFF9F"
+                      bg="#82fffa"
                       borderRadius="30px"
-                      border="2px solid #837377"
+                      border="2px solid #b67ed9"
                       _focus={{ boxShadow: 'none' }}
                       w="45px"
                       h="22px"
@@ -409,10 +409,10 @@ const UnlistedCreate = () => {
                     />
                   </Slider>
                   <Flex flexDir="row" justify="space-between" mt="4">
-                    <Text fontSize="10px" fontWeight={500}>
+                    <Text fontSize="10px" fontWeight={500} color="#dde7f9">
                       Low Risk
                     </Text>
-                    <Text fontSize="10px" fontWeight={500}>
+                    <Text fontSize="10px" fontWeight={500} color="#dde7f9">
                       High Risk
                     </Text>
                   </Flex>
@@ -423,10 +423,10 @@ const UnlistedCreate = () => {
             <Flex justifyContent={'center'} align="center">
               {address ? (
                 <Button
-                  bg="#3E7FDF"
+                  bgGradient="linear(to-r, #403268, #765fff, #82fffc)"
                   borderRadius="20px"
                   p="10px 140px"
-                  color="white"
+                  color="black"
                   fontSize="14px"
                   fontWeight="400"
                   type="button"
@@ -604,7 +604,7 @@ export default UnlistedCreate;
 const useStyles = () => {
   return {
     root: {
-      backgroundColor: '#FBFDFF',
+      backgroundColor: '#040411',
     },
   };
 };

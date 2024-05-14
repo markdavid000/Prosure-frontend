@@ -211,13 +211,13 @@ const AddCover = ({ ...rest }) => {
                   <Image src={arrowLeft} boxSize="15px" />
                 </Link>
                 <Spacer mr="5px" />
-                <Text fontSize="18px" fontWeight="600">
+                <Text fontSize="18px" fontWeight="600" color={'#dde7f9'}>
                   Create insurance cover for InstadApp protocol
                 </Text>
               </Flex>
             </Flex>
             <Flex gap={10}>
-              <Text fontSize="14px" fontWeight={500} mt="8px">
+              <Text fontSize="14px" fontWeight={500} mt="8px" color={'#dde7f9'}>
                 Please fill in the following information to create cover for the
                 protocol
               </Text>
@@ -243,7 +243,7 @@ const AddCover = ({ ...rest }) => {
 
             <Flex mt="20px" flexDir="column" p="50px" onSubmit={handleSubmit}>
               <Flex flexDir="column" mt="30px">
-                <Text fontSize="15px" fontWeight="500">
+                <Text fontSize="15px" fontWeight="500" color={'#868e96'}>
                   Amount Covered
                 </Text>
                 <Spacer />
@@ -254,11 +254,12 @@ const AddCover = ({ ...rest }) => {
                 >
                   <Input
                     placeholder="Enter amount of insurance cover"
+                    color={'#dde7f9'}
                     borderRadius="0"
                     border="0"
-                    borderBottom="1px solid #49454F"
+                    borderBottom="1px solid #403268"
                     _placeholder={{
-                      color: '#1C1B1F',
+                      color: '#9e9899',
                       justifySelf: 'flex-end',
                       fontSize: '12px',
                     }}
@@ -268,12 +269,8 @@ const AddCover = ({ ...rest }) => {
                     name="amountCovered"
                     onChange={e => setAmountCovered(e.target.value)}
                   />
-                  <InputRightAddon
-                    borderRadius={0}
-                    border="0"
-                    bg="footerBgColor"
-                  >
-                    <Text fontSize="12px" fontWeight={500}>
+                  <InputRightAddon borderRadius={0} border="0" bg="#b67ed9">
+                    <Text fontSize="12px" fontWeight={500} color={'#dde7f9'}>
                       USDC
                     </Text>
                     <Image src={walletIcon} ml="4px" boxSize="20px" />
@@ -285,10 +282,10 @@ const AddCover = ({ ...rest }) => {
             <Flex justifyContent={'center'} align="center">
               {address ? (
                 <Button
-                  bg="#3E7FDF"
+                  bgGradient="linear(to-r, #403268, #765fff, #82fffc)"
                   borderRadius="20px"
                   p="10px 140px"
-                  color="white"
+                  color="black"
                   fontSize="14px"
                   fontWeight="400"
                   type="button"
@@ -338,7 +335,7 @@ export default AddCover;
 const useStyles = () => {
   return {
     root: {
-      backgroundColor: '#FBFDFF',
+      backgroundColor: '#040411',
     },
   };
 };
