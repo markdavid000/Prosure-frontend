@@ -28,7 +28,7 @@ const prosureRootstockTestnet = {
     symbol: 'tRBTC',
   },
   rpcUrls: {
-    default: { HTTPS: ['https://public-node.testnet.rsk.co'] },
+    default: 'https://public-node.testnet.rsk.co',
   },
   blockExplorers: {
     etherscan: {

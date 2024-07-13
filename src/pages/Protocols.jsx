@@ -60,7 +60,7 @@ const Protocols = () => {
     functionName: 'getAllProtocolData',
   });
 
-  console.log(getProtocols, 'sdhj');
+  console.log({ getProtocols }, 'sdhj');
 
   const {
     root,
