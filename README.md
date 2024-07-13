@@ -26,11 +26,6 @@ NOTE: this contract addresses are deployed and verified on `Rootstock` testnet.
 
 Check out the Prosure frontend [here](https://prosure-frontend.vercel.app/).
 
-![Frontend Page](./assests/landingPage.jpg)
-
-![Dashboard Page](./assests/dashboard.jpg)
-
-![Insure Page](./assests/InsurePage.jpg)
 
 ## About Prosure
 
