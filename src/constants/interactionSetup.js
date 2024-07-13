@@ -4,11 +4,11 @@ import ERC20 from '../abi/ERC20Abi.json';
 
 // Deployed Contract Addresses
 
-export const mUSDT = '0x934932752EDDeb6150e412E04D747bd974164A7d';
+export const mUSDT = '0x428B2A32171157C9A67b5e5283fd00Ca42fd54FE';
 
-export const prosureContract = '0xFCB01529892bF14daCf90cc4B00184133cB07339';
+export const prosureContract = '0x1A26f543e0c7E478C7D998109c0ACf7dB1827a6d';
 
-export const governanceContract = '0x054aC154CF6c757697B290fB7A824B6aC2262F82';
+export const governanceContract = '0xFeCe593B6eB317f4fD94804264742b092B4566c6';
 
 export const prosureSetup = {
   address: prosureContract,

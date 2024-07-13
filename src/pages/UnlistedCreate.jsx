@@ -559,7 +559,7 @@ const UnlistedCreate = () => {
                     ) : InsureWaitLoading || insureSuccess ? (
                       <Button
                         as="a"
-                        href={`https://sepolia-blockscout.lisk.com/tx/${newInsureData?.hash}`}
+                        href={`https://rootstock-testnet.blockscout.com/tx/${newInsureData?.hash}`}
                         target="_blank"
                         w="100%"
                         bg="#3a7cdf"

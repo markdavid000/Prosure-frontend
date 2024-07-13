@@ -134,7 +134,7 @@ const TransactionLoaderModal = ({
             ) : coverLoading || success ? (
               <Button
                 as="a"
-                href={`https://sepolia-blockscout.lisk.com/tx/${coverData?.hash}`}
+                href={`https://rootstock-testnet.blockscout.com/tx/${coverData?.hash}`}
                 target="_blank"
                 w="100%"
                 bg="#3a7cdf"
