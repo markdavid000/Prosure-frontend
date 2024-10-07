@@ -14,30 +14,30 @@ import { getDefaultWallets, RainbowKitProvider } from '@rainbow-me/rainbowkit';
 import { WagmiConfig, configureChains, createClient } from 'wagmi';
 import { jsonRpcProvider } from 'wagmi/providers/jsonRpc';
 import ethereumLogo from '../src/assets/ethereum 1.svg';
-import rootstockLogo from '../src/assets/rootstock.svg';
+import BaseSepoliaLogo from '../src/assets/BaseSepolia.svg';
 
 // custom chain
-const prosureRootstockTestnet = {
-  id: 31,
-  name: 'Rootstock',
-  iconUrl: rootstockLogo,
+const prosureBaseSepoliaTestnet = {
+  id: 84532,
+  name: 'BaseSepolia',
+  iconUrl: BaseSepoliaLogo,
   iconBackground: '#000',
   nativeCurrency: {
     decimals: 18,
-    name: 'Smart Bitcoin',
-    symbol: 'tRBTC',
+    name: 'Ethereum',
+    symbol: 'Eth',
   },
   rpcUrls: {
-    default: 'https://public-node.testnet.rsk.co',
+    default: 'https://base-sepolia-rpc.publicnode.com',
   },
   blockExplorers: {
     etherscan: {
-      name: 'Rootstock',
-      url: 'https://explorer.testnet.rootstock.io/',
+      name: 'BaseSepolia',
+      url: 'https://base-sepolia.blockscout.com/',
     },
     default: {
-      name: 'Rootstock',
-      url: 'https://explorer.testnet.rootstock.io/',
+      name: 'BaseSepolia',
+      url: 'https://base-sepolia.blockscout.com/',
     },
   },
   contracts: {},
@@ -45,7 +45,7 @@ const prosureRootstockTestnet = {
 };
 
 const { provider, chains } = configureChains(
-  [prosureRootstockTestnet],
+  [prosureBaseSepoliaTestnet],
   [jsonRpcProvider({ rpc: chain => ({ http: chain.rpcUrls.default }) })]
 );
 
