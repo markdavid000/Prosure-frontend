@@ -94,6 +94,7 @@ const Protocols = () => {
   const displayProtocolCards = getProtocols
     ? getProtocols
         .slice(pagesVisited, pagesVisited + protocolCardPerPage)
+        .reverse()
         .map((item, index) => {
           return (
             <ProtocolGrid
